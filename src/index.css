@@ -1,0 +1,26 @@
+/* Bootstrap + project variables */
+:root{
+  --brand: #FFA629;
+  --bg-dark: #121212;
+  --text-light: #ffffff;
+}
+
+html,body,#root{height:100%;}
+
+body{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background-color: #fff;
+  color: #212529;
+}
+
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.5rem .75rem;background:var(--brand);color:#000;border-radius:.25rem}
+
+/* Small helpers */
+.section-title{font-size:1.25rem;font-weight:700}
+
+/* Make brand button consistent */
+.btn-brand{background-color:var(--brand);color:#000;border-color:var(--brand)}
+.btn-brand:hover{filter:brightness(.95)}
+
+@media (prefers-reduced-motion: reduce){*{animation-duration:0.001ms!important;transition-duration:0.001ms!important}}

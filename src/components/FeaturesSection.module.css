@@ -1,0 +1,19 @@
+
+.brandColor{
+    color: var(--brand);
+}
+
+.bgSecond{
+    background-color: var(--bg-dark);
+}
+
+.section{
+    height: auto;
+}
+
+/* at screen size lessthan 769 make it 120vh */
+/* @media (max-width: 768px) {
+    .section{
+        height: 130vh;
+    }
+} */
