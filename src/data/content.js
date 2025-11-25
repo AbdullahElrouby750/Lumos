@@ -59,7 +59,7 @@ export const siteContent = {
   },
   {
     name: `Henar Ahmed`,
-    role: 'UI UX Designer',
+    role: 'UI UX Designer / Game dev',
   },
   {
     name: `Habiba Elshobky `,
