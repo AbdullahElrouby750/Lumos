@@ -63,7 +63,7 @@ export const siteContent = {
   },
   {
     name: `Habiba Elshobky `,
-    role: 'AI/ML Specialist',
+    role: 'AI/ML Specialist / UI UX Designer',
   },
   {
     name: `Alaa Saleh`,
