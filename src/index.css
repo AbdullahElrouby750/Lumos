@@ -1,0 +1,204 @@
+/* Tailwind removed: using Bootstrap 5 utilities instead */
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  min-width: 320px;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4500;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6a1a;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
+p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #ff4500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff6a1a;
+}
+
+/* Buttons - Base Styles */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* Focus Styles */
+button:focus,
+a:focus {
+  outline: 2px solid #ff4500;
+  outline-offset: 2px;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container-custom {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-padding-large {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.btn-primary {
+  background-color: #ff4500;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #ff6a1a;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #ff4500;
+  color: #ff4500;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: #ff4500;
+  color: white;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(90deg, #ffa500 0%, #ff4500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-orange {
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.card-dark {
+  background-color: #121212;
+  border: 1px solid #1f1f1f;
+  border-radius: 1rem;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+/* custom hover shadow for cards */
+.hover-shadow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
+}
+
+/* custom color utilities */
+.bg-dark-cardDark { background-color: #121212 !important; }
+.border-dark-borderDark { border-color: #1f1f1f !important; }
+.bg-dark-borderDark { background-color: #1f1f1f !important; }
+
+/* orange accent utilities */
+.text-orange-lumos { color: #ff4500 !important; }
+.bg-orange-lumos { background-color: #ff4500 !important; }
+.border-orange-lumos { border-color: #ff4500 !important; }
+
+/* text hover utility */
+.hover-text-orange:hover {
+  color: #ff4500 !important;
+}
