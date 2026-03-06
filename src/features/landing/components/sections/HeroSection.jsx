@@ -1,3 +1,6 @@
+import style from './HeroSection.module.css';
+import bgImg from '../../../../assets/herobg.svg';
+import Agent_AI_Avatar from '../../../../assets/Agent_AI_Avatar.svg';
 /**
  * HeroSection
  * Hero banner with:
@@ -9,83 +12,90 @@
  */
 export function HeroSection() {
   return (
-    <section id="hero" className="section-padding-large position-relative overflow-hidden">
+    <section id="hero" className={`section-padding-large position-relative overflow-hidden p-0 ${style.vh120} d-flex justify-content-center align-items-center`}>
       {/* Gradient background effect */}
-      <div className="position-absolute top-0 start-0 w-100 h-100" style={{
-        background: 'radial-gradient(circle at top left, rgba(255,69,0,0.1), transparent)',
-        opacity: 0.4
-      }} />
+      <div className="position-absolute top-0 start-0 w-100 h-100 bg-black " />
 
-      <div className="container-custom position-relative" style={{ zIndex: 10 }}>
-        <div className="row align-items-center gx-5 gy-4">
+      <img src={bgImg} alt="" className={` position-absolute ${style.w90}`} />
+      <div className={`container-custom position-relative z-10 ${style.w90} h-100`}>
+        <div className="row align-items-center gx-5 gy-4 h-100">
           {/* Left: Content */}
-          <div className="col-12 col-lg-6">
-            <div className="mb-4">
-              <h1 className="display-4 fw-bold">
-                See Beyond<br />
-                <span className="text-orange-lumos">Limits</span>
-              </h1>
-            </div>
+          <div className="col-12 col-lg-6 d-flex flex-column justify-content-between h-75">
+            <div>
 
-            <p className="lead text-secondary mb-4" style={{ maxWidth: '24rem' }}>
-              Experience the future of assistive technology. Lumos combines cutting-edge AI with intuitive design to
-              help you navigate the world with confidence and independence.
-            </p>
+              <div className="mb-4">
+                <p className=" display-1 text-light fw-bolder pb-0 mb-0" style={{fontSize: '96.6px', fontFamily: ""}}>
+                  See Beyond<br />
+                  <span className="text-orange-lumos pt-0 mt-0" style={{fontSize: '150px'}}>Limits</span>
+                </p>
+              </div>
+
+              <p className=" lead text-light mb-4 w-75" style={{ fontSize: '14px', lineHeight: '1.2' }}>
+                Lumos is an intelligent accessibility system designed to support blind and low-vision users with greater independence, awareness, and comfort. It connects seamlessly, offering real-time guidance, voice interaction, and smart assistance whenever needed.
+              </p>
+            </div>
 
             {/* Stats */}
-            <div className="row text-center mb-4">
-              <div className="col">
-                <p className="h2 text-orange-lumos fw-bold">250+</p>
-                <p className="small text-muted">Users Tested</p>
-              </div>
-              <div className="col">
-                <p className="h2 text-orange-lumos fw-bold">98%</p>
-                <p className="small text-muted">Accuracy</p>
-              </div>
-              <div className="col">
-                <p className="h2 text-orange-lumos fw-bold">Top 50</p>
-                <p className="small text-muted">Huawei</p>
-              </div>
-            </div>
+
 
             {/* CTA Buttons */}
-            <div className="d-flex flex-wrap gap-3">
-              <button className="btn btn-primary">Explore Now</button>
-              <button className="btn btn-secondary">Watch Demo</button>
+            <div className="d-flex flex-wrap gap-3 mb-5 align-self-center">
+              <button className="btn btn-secondary ">Explore products</button>
+              <button className="btn btn-primary ">View pricing plan</button>
             </div>
           </div>
 
           {/* Right: Image Placeholder */}
-          <div className="col-12 col-lg-6 d-none d-lg-flex justify-content-center">
-            <div className="position-relative" style={{ width: '100%', paddingTop: '100%' }}>
-              {/* Gradient box with border */}
-              <div className="position-absolute top-0 start-0 w-100 h-100 rounded-3 border glow-orange" style={{
-                background: 'linear-gradient(135deg, rgba(255,69,0,0.2), #121212)',
-                borderColor: 'rgba(255,69,0,0.3)'
-              }} />
+          <div className="col-12 col-lg-6 d-none d-lg-flex flex-column  h-100">
+            <div className=' w-100 h-75 d-flex align-items-center justify-content-end position-relative '>
+              {/* need the hight to be exactly = the width */}
+              <div className={`position-relative rounded-4 glassmorphism ${style.w65} ${style.h65} d-flex flex-column align-items-center justify-content-around py-2 px-3`} >
 
-              {/* Icon or placeholder content */}
-              <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                <div className="text-center">
-                  <div className="bg-orange-lumos bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center border" style={{
-                    width: '6rem',
-                    height: '6rem',
-                    borderColor: 'rgba(255,69,0,0.3)'
-                  }}>
-                    <svg
-                      className="text-orange-lumos" width="3rem" height="3rem" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
+                <div className=' w-100 d-flex justify-content-around align-items-center'>
+                  <div className=' d-flex justify-content-center border border-orange-lumos rounded-circle overflow-hidden'>
+                    <img src={Agent_AI_Avatar} alt="Agent AI" srcset="" />
                   </div>
-                  <p className="text-secondary fw-medium mt-2">Smart Glasses</p>
+                  <div className=' d-flex  flex-column justify-content-center align-items-start w-75'>
+                    <p className=' text-light fw-medium small mb-0'>Smart Assistant</p>
+                    <p className=' text-orange-lumos mb-0'>Your Personal Vision Assistant</p>
+                  </div>
+                </div>
+
+                <div className=' w-100 d-flex flex-column align-items-center justify-content-around'>
+                  <div className={` ${style.w90} d-flex justify-content-between align-items-center border-bottom border-dark mb-3`}>
+                    <p className={style.customGray}>Object recognition</p>
+                    <p className=' text-light fw-medium'>99% accurate</p>
+                  </div>
+
+                  <div className={` ${style.w90} d-flex justify-content-between align-items-center border-bottom border-dark`}>
+                    <p className={style.customGray}>Response time</p>
+                    <p className=' text-light fw-medium'> {'<'} 200ms</p>
+                  </div>
+
+                </div>
+
+                <div className=' w-100 px-4'>
+                  <button className=' w-100 mb-2 h-100 btn btn-primary'>
+                    Try Voice Demo
+                  </button>
                 </div>
               </div>
             </div>
+            <div className={` ${style.w90} h-25 d-flex align-items-center justify-content-around`}>
+                <div className={` pt-1 ${style.w30} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center`}>
+                  <p className="h2 text-orange-lumos fw-bold">360°</p>
+                  <p className={`small ${style.customGray}`}>Obstacle Detection</p>
+                </div>
+                <div className={` pt-1 ${style.w30} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center`}>
+                  <p className="h2 text-orange-lumos fw-bold">24/7</p>
+                  <p className={`small ${style.customGray}`}>Smart Assistance</p>
+                </div>
+                <div className={` pt-1 ${style.w30} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center`}>
+                  <p className="h2 text-orange-lumos fw-bold">100%</p>
+                  <p className={`small ${style.customGray}`}> Safety Confidence</p>
+                </div>
+            </div>
+
           </div>
         </div>
 
@@ -119,7 +129,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>  );
+    </section>);
 }
 
 export default HeroSection;

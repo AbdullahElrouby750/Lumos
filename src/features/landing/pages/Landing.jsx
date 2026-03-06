@@ -7,6 +7,7 @@ import TeamSection from '../components/sections/TeamSection';
 import FAQSection from '../components/sections/FAQSection';
 import CTASection from '../components/sections/CTASection';
 import FooterSection from '../components/sections/FooterSection';
+import LomoSection from '../components/sections/LomoSection';
 
 /**
  * Landing Page
@@ -24,10 +25,11 @@ import FooterSection from '../components/sections/FooterSection';
 export function Landing() {
   return (
     <div className="">
-      <NavbarSection />
+      {/* <NavbarSection /> */}
       <HeroSection />
       <FeaturesSection />
       <ComponentsSection />
+      <LomoSection />
       <PricingSection />
       <TeamSection />
       <FAQSection />

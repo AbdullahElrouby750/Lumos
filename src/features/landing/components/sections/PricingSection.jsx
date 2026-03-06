@@ -25,7 +25,7 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="section-padding-large" style={{ backgroundColor: '#121212' }}>
+    <section id="pricing" className="section-padding-large bg-black">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-5">

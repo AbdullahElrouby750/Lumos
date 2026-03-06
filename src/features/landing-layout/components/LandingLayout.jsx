@@ -9,7 +9,7 @@ import { Outlet } from 'react-router-dom';
  */
 export function LandingLayout() {
   return (
-    <div className="bg-dark min-vh-100 text-white">
+    <div className="bg-black min-vh-100 text-white">
       <Outlet />
     </div>
   );

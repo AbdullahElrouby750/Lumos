@@ -48,20 +48,23 @@ export const COMPONENTS = [
   {
     id: 1,
     name: 'Smart Glasses',
-    description: 'Advanced augmented reality glasses with real-time visual processing',
-    icon: 'Glasses',
+    description: 'Advanced Al-powered visual recognition that identifies objects, text, and faces in real-time, relaying information through crystal-clear audio.',
+    shadow: 'bottom',
+    descriptionPosition: 'start',
   },
   {
     id: 2,
-    name: 'Sensorized Cane',
-    description: 'Intelligent mobility aid with obstacle detection and navigation',
-    icon: 'Navigation',
+    name: 'Intelligent Cane',
+    description: 'Equipped with ultrasonic sensors and haptic feedback to detect obstacles above ground level. Seamlessly integrates with GPS for turn-by-turn navigation.',
+    shadow: 'Right',
+    descriptionPosition: 'center',
   },
   {
     id: 3,
-    name: 'Smart Bracelets',
-    description: 'Wearable sensors for health monitoring and gesture control',
-    icon: 'Watch',
+    name: 'Lumo band',
+    description: 'Features ToF sensors for obstacle detection, directional vibration feedback, and a lightweight design for all-day comfort',
+    shadow: 'top',
+    descriptionPosition: 'end',
   },
 ];
 

@@ -29,7 +29,7 @@ export function NavbarSection() {
   return (
     <>
       {/* Fixed Navbar using react-bootstrap */}
-      <Navbar expand="lg" fixed="top" className="bg-dark bg-opacity-80 border-bottom">
+      <Navbar expand="lg" fixed="top" className=" border-bottom">
         <Container className="py-3">
           {/* Logo */}
           <Navbar.Brand href="#" className="d-flex align-items-center">

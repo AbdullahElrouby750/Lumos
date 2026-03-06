@@ -10,7 +10,7 @@ import { Accordion } from 'react-bootstrap';
  */
 export function FAQSection() {
   return (
-    <section id="faq" className="section-padding-large" style={{ backgroundColor: '#121212' }}>
+    <section id="faq" className="section-padding-large bg-black">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-5">

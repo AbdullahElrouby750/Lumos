@@ -1,0 +1,46 @@
+
+.vh120{
+    height: 120vh;
+}
+
+.w90{
+    width: 90%!important;
+    max-width: 90%!important;
+}
+.w85{
+    width: 85%!important;
+    max-width: 85%!important;
+}
+
+.w65{
+    width: 65%!important;
+    max-width: 65%!important;
+}
+.w55{
+    width: 55%!important;
+    max-width: 55%!important;
+}
+.w45{
+    width: 45%!important;
+    max-width: 45%!important;
+}
+.w30{
+    width: 30%!important;
+    max-width: 30%!important;
+}
+
+.h90{
+    height: 90%!important;
+}
+
+.h85{
+    height: 85%!important;
+}
+
+
+.h65{
+    height: 55%!important;
+}
+.customGray{
+    color: hsla(218, 11%, 65%, 1);
+}

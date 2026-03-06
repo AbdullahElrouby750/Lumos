@@ -11,11 +11,11 @@ import FeatureCard from '../common/FeatureCard';
  */
 export function FeaturesSection() {
   return (
-    <section id="features" className="section-padding-large" style={{ backgroundColor: '#121212' }}>
-      <div className="position-absolute top-0 start-0 w-100 h-100" style={{
+    <section id="features" className="section-padding-large bg-black">
+      {/* <div className="position-absolute top-0 start-0 w-100 h-100" style={{
         background: 'radial-gradient(circle at top left, rgba(255,69,0,0.05), transparent)',
         opacity: 0.5
-      }} />
+      }} /> */}
 
       <div className="container-custom position-relative" style={{ zIndex: 10 }}>
         {/* Header */}
