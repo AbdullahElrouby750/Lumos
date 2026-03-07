@@ -13,7 +13,7 @@ export function PricingCard({ plan }) {
 
   return (
     <div className={`card card-dark position-relative h-100 ${highlighted ? 'border-2 border-orange-lumos shadow-lg' : ''}`}
-         style={highlighted ? { transform: 'scale(1.05)' } : {}}>
+      style={highlighted ? { transform: 'scale(1.05)' } : {}}>
       {/* Highlighted Badge */}
       {highlighted && (
         <span className="badge bg-orange-lumos text-dark position-absolute" style={{ top: '-0.5rem', right: '-0.5rem' }}>
@@ -23,23 +23,26 @@ export function PricingCard({ plan }) {
 
       <div className="card-body d-flex flex-column">
         {/* Plan Header */}
-        <div className="mb-3">
-          <h3 className="h4 text-white mb-1">{name}</h3>
-          <p className="text-secondary small mb-0">{description}</p>
-        </div>
+        <div>
 
-        {/* Pricing */}
-        <div className="mb-3">
-          <p className="display-5 text-white mb-0">{price}</p>
-          <p className="text-secondary small">{period}</p>
-        </div>
+          <div className="mb-3">
+            <h3 className="h4 text-white mb-1">{name}</h3>
+            <p className="text-secondary small mb-0">{description}</p>
+          </div>
 
-        {/* CTA Button */}
-        <button
-          className={`btn ${highlighted ? 'btn-primary' : 'btn-secondary'} mt-auto w-100`}
-        >
-          {cta}
-        </button>
+          {/* Pricing */}
+          <div className="mb-3">
+            <p className="display-5 text-white mb-0">{price}</p>
+            <p className="text-secondary small">{period}</p>
+          </div>
+
+          {/* CTA Button */}
+          <button
+            className={`btn ${highlighted ? 'btn-primary' : 'btn-secondary'} mt-auto w-100`}
+          >
+            {cta}
+          </button>
+        </div>
 
         {/* Divider */}
         <hr className="bg-secondary my-3" />

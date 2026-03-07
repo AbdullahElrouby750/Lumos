@@ -169,6 +169,10 @@ html {
   transition: all 0.3s ease;
 }
 
+.bg-light-orange {
+  background-color: hsla(25, 100%, 50%, 0.05);
+}
+
 .text-gradient-orange {
   background: linear-gradient(90deg, #ffa500 0%, var(--brand-color) 100%);
   -webkit-background-clip: text;
@@ -278,4 +282,12 @@ html {
 
 .bgCustomGray{
   background-color: hsla(0, 0%, 7%, 1) !important;
+}
+
+.customGray{
+    color: hsla(218, 11%, 65%, 1)!important;
+}
+
+.thinBorder{
+  border-bottom: 2px solid hsla(218, 11%, 65%, 0.1) !important;
 }

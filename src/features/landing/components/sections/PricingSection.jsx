@@ -17,87 +17,90 @@ export function PricingSection() {
   // Comparison table data
   const comparisonFeatures = [
     { feature: 'Smart Glasses', starter: true, premium: true, professional: true },
-    { feature: 'Cloud Storage', starter: '10GB', premium: '100GB', professional: 'Unlimited' },
-    { feature: 'Battery Life', starter: '8 hours', premium: '16 hours', professional: 'All-day+' },
-    { feature: 'Customer Support', starter: 'Email', premium: '24/7 Priority', professional: 'Dedicated' },
-    { feature: 'API Access', starter: false, premium: true, professional: true },
+    { feature: 'Mobile App', starter: true, premium: true, professional: true },
+    { feature: 'Real-time Voice Guidance', starter: true, premium: true, professional: true },
+    { feature: 'Gemini Integration', starter: false, premium: true, professional: true },
+    { feature: 'Customer Support', starter: 'Support chat', premium: '24/7 Priority', professional: 'Dedicated' },
+    { feature: 'Emergency SOS System', starter: false, premium: true, professional: true },
     { feature: 'Custom Integrations', starter: false, premium: false, professional: true },
+    { feature: 'Offline Core Functions', starter: true, premium: true, professional: true },
   ];
 
   return (
     <section id="pricing" className="section-padding-large bg-black">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-5">
-          <h2 className="display-5 fw-bold">
+        <div className="text-start mb-5">
+          <h2 className="display-4 fw-bold">
             Pricing <span className="text-orange-lumos">Plan</span>
           </h2>
-          <p className="text-secondary lead mx-auto" style={{ maxWidth: '36rem' }}>
+          {/* <p className="text-secondary lead mx-auto" style={{ maxWidth: '36rem' }}>
             Flexible plans for every need. Start free, upgrade anytime.
-          </p>
+          </p> */}
         </div>
 
         {/* Pricing Cards */}
-        <Row className="g-4">
+        <Row className="g-4 justify-content-center mt-5">
           {PRICING_PLANS.map((plan) => (
-            <Col key={plan.id} xs={12} md={6} lg={4}>
+            <Col key={plan.id} xs={10} md={6} lg={4} className=' my-3 my-lg-2
+            '>
               <PricingCard plan={plan} />
             </Col>
           ))}
         </Row>
 
         {/* Comparison Table */}
-        <div className="mt-5 pt-5 border-top" style={{ borderColor: '#1f1f1f' }}>
-          <div className="d-flex justify-content-between align-items-center mb-4">
+        <div className="mt-5 pt-5" >
+          <div className=" w-100 d-flex flex-column justify-content-between align-items-center mb-4">
             <h3 className="h4 text-white">Compare Features</h3>
-            <Button variant="link" className="text-orange-lumos fw-semibold p-0">
-              View All →
-            </Button>
+            <p className=" text-center text-secondary mx-auto" style={{ maxWidth: '36rem' }}>
+              Explore how Lumos hardware and software work together to provide a safer, more independent life.
+            </p>
           </div>
 
           {/* Table - Desktop */}
           <div className="d-none d-lg-block overflow-auto">
             <Table variant="dark" responsive className="w-100">
               <thead>
-                <tr>
-                  <th>Feature</th>
-                  <th className="text-center">Starter</th>
-                  <th className="text-center">Premium</th>
-                  <th className="text-center">Professional</th>
+                <tr className=' border-dark'>
+                  <th className=' fs-4 customGray  py-4 bg-black'>Feature</th>
+                  <th className=" fs-4 customGray text-center bg-black py-4">Starter</th>
+                  <th className=" fs-4 customGray text-center bg-black bg-light-orange py-4">Premium</th>
+                  <th className=" fs-4 customGray text-center bg-black py-4">Professional</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonFeatures.map((row, index) => (
-                  <tr key={index} className="align-middle">
-                    <td className="fw-medium">{row.feature}</td>
-                    <td className="text-center">
+                  <tr key={index} className="align-middle  thinBorder ">
+                    <td className="fw-medium bg-black py-4 border-0 fs-4">{row.feature}</td>
+                    <td className="text-center bg-black py-4 border-0 fs-4">
                       {typeof row.starter === 'boolean' ? (
                         row.starter ? (
                           <Check className="text-orange-lumos" />
                         ) : (
-                          <span className="text-muted">—</span>
+                          <span className="text-light">—</span>
                         )
                       ) : (
                         <span className="text-secondary small">{row.starter}</span>
                       )}
                     </td>
-                    <td className="text-center">
+                    <td className="text-center bg-black py-4 border-0 fs-4">
                       {typeof row.premium === 'boolean' ? (
                         row.premium ? (
                           <Check className="text-orange-lumos" />
                         ) : (
-                          <span className="text-muted">—</span>
+                          <span className="text-light">—</span>
                         )
                       ) : (
                         <span className="text-secondary small">{row.premium}</span>
                       )}
                     </td>
-                    <td className="text-center">
+                    <td className="text-center bg-black py-4 border-0 fs-4">
                       {typeof row.professional === 'boolean' ? (
                         row.professional ? (
                           <Check className="text-orange-lumos" />
                         ) : (
-                          <span className="text-muted">—</span>
+                          <span className="text-light">—</span>
                         )
                       ) : (
                         <span className="text-secondary small">{row.professional}</span>
@@ -111,6 +114,14 @@ export function PricingSection() {
 
           {/* Mobile Comparison */}
           <div className="d-lg-none">
+            <div className="card card-dark p-3 mb-3">
+              <Row className='text-center small'>
+                <Col className="fw-semibold text-light">Starter</Col>
+                <Col className="fw-semibold text-orange-lumos">Premium</Col>
+                <Col className="fw-semibold text-light">Professional</Col>
+              </Row>
+            </div>
+
             {comparisonFeatures.map((row, index) => (
               <div key={index} className="card card-dark p-3 mb-3">
                 <p className="fw-semibold text-white mb-2">{row.feature}</p>

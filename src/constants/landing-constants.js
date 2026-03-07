@@ -38,7 +38,7 @@ export const FEATURES = [
     description: 'End-to-end encryption ensures your data stays secure and private.',
   },
   {
-    icon: 'Zap',
+    icon: 'BatteryFull',
     title: 'Long Battery Life',
     description: 'Ultra-efficient processing keeps your device running all day long.',
   },
@@ -50,7 +50,7 @@ export const COMPONENTS = [
     name: 'Smart Glasses',
     description: 'Advanced Al-powered visual recognition that identifies objects, text, and faces in real-time, relaying information through crystal-clear audio.',
     shadow: 'bottom',
-    descriptionPosition: 'start',
+    descriptionPosition: 'end',
   },
   {
     id: 2,

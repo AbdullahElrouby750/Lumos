@@ -7,6 +7,7 @@ import {
   BarChart,
   Settings,
   Wifi,
+  BatteryFull
 } from 'lucide-react';
 
 const iconMap = {
@@ -18,6 +19,7 @@ const iconMap = {
   BarChart,
   Settings,
   Wifi,
+  BatteryFull
 };
 
 /**
