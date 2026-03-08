@@ -49,7 +49,7 @@ export const COMPONENTS = [
     id: 1,
     name: 'Smart Glasses',
     description: 'Advanced Al-powered visual recognition that identifies objects, text, and faces in real-time, relaying information through crystal-clear audio.',
-    shadow: 'bottom',
+    shadow: 'Right',
     descriptionPosition: 'end',
   },
   {
@@ -63,7 +63,7 @@ export const COMPONENTS = [
     id: 3,
     name: 'Lumo band',
     description: 'Features ToF sensors for obstacle detection, directional vibration feedback, and a lightweight design for all-day comfort',
-    shadow: 'top',
+    shadow: 'Right',
     descriptionPosition: 'end',
   },
 ];

@@ -63,15 +63,15 @@ export function PricingSection() {
             <Table variant="dark" responsive className="w-100">
               <thead>
                 <tr className=' border-dark'>
-                  <th className=' fs-4 customGray  py-4 bg-black'>Feature</th>
-                  <th className=" fs-4 customGray text-center bg-black py-4">Starter</th>
-                  <th className=" fs-4 customGray text-center bg-black bg-light-orange py-4">Premium</th>
-                  <th className=" fs-4 customGray text-center bg-black py-4">Professional</th>
+                  <th className=' fs-4 customGray fw-bold  py-4 bg-black'>Feature</th>
+                  <th className=" fs-4 customGray fw-bold text-center bg-black py-4">Starter</th>
+                  <th className=" fs-4 text-orange-lumos fw-bold text-center bg-black bg-light-orange py-4 ">Premium</th>
+                  <th className=" fs-4 customGray fw-bold text-center bg-black py-4">Professional</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonFeatures.map((row, index) => (
-                  <tr key={index} className="align-middle  thinBorder ">
+                  <tr key={index} className="align-middle  thinBorder">
                     <td className="fw-medium bg-black py-4 border-0 fs-4">{row.feature}</td>
                     <td className="text-center bg-black py-4 border-0 fs-4">
                       {typeof row.starter === 'boolean' ? (
@@ -84,7 +84,7 @@ export function PricingSection() {
                         <span className="text-secondary small">{row.starter}</span>
                       )}
                     </td>
-                    <td className="text-center bg-black py-4 border-0 fs-4">
+                    <td className="text-center bg-black py-4 border-0 fs-4 bg-light-orange">
                       {typeof row.premium === 'boolean' ? (
                         row.premium ? (
                           <Check className="text-orange-lumos" />
@@ -92,7 +92,7 @@ export function PricingSection() {
                           <span className="text-light">—</span>
                         )
                       ) : (
-                        <span className="text-secondary small">{row.premium}</span>
+                        <span className="text-secondary small text-orange-lumos">{row.premium}</span>
                       )}
                     </td>
                     <td className="text-center bg-black py-4 border-0 fs-4">
@@ -103,7 +103,7 @@ export function PricingSection() {
                           <span className="text-light">—</span>
                         )
                       ) : (
-                        <span className="text-secondary small">{row.professional}</span>
+                        <span className="text-secondary small fw-bold">{row.professional}</span>
                       )}
                     </td>
                   </tr>

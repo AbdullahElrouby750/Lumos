@@ -14,11 +14,11 @@ export function TeamSection() {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-5">
-          <h2 className="display-5 fw-bold">
+          <h2 className="display-4 fw-bold">
             The Minds Behind <span className="text-orange-lumos">Lumos</span>
           </h2>
-          <p className="text-secondary lead mx-auto" style={{ maxWidth: '36rem' }}>
-            A diverse team of engineers, designers, and visionaries dedicated to innovation
+          <p className=" customGray w-75  lead mx-auto" >
+            A dedicated team of engineers and designers crafting the future of assistive technology to empower the blind community.
           </p>
         </div>
 

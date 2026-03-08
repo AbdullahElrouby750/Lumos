@@ -1,19 +1,22 @@
 import { COMPONENTS } from '../../../../constants/landing-constants';
 import { Check } from 'lucide-react';
-import glassesBgImg from '../../../../assets/smartGlassesBGnoShadow.svg';
+// import glassesBgImg from '../../../../assets/smartGlassesBGnoShadow.svg';
+import glassesBgImgShadow from '../../../../assets/smartGlassesBG.svg';
 import glassesIcon from '../../../../assets/glassessIcon.svg';
-import caneBgImg from '../../../../assets/caneBGnoShadow.svg';
+// import caneBgImg from '../../../../assets/caneBGnoShadow.svg';
+import caneBgImgShadow from '../../../../assets/caneBG.svg';
 import caneIcon from '../../../../assets/manWithCaneIcon.svg';
-import bandBgImg from '../../../../assets/lumoBandBGnoShadow.svg';
+// import bandBgImg from '../../../../assets/lumoBandBGnoShadow.svg';
+import bandBgImgShadow from '../../../../assets/lumoBandBG.svg';
 import bandIcon from '../../../../assets/lumoBandIcon.svg';
 import style from './HeroSection.module.css';
 import { useResponsiveBackgroundSize } from '../../../../shared/hooks/landing-hooks/useResponsiveBackgroundSize';
 
 
 const productImages = {
-  'Smart Glasses': glassesBgImg,
-  'Intelligent Cane': caneBgImg,
-  'Lumo band': bandBgImg,
+  'Smart Glasses': glassesBgImgShadow,
+  'Intelligent Cane': caneBgImgShadow,
+  'Lumo band': bandBgImgShadow,
 };
 
 const productIcons = {
@@ -31,19 +34,6 @@ const productIcons = {
  */
 export function ComponentsSection() {
   const responsiveBackgroundSize = useResponsiveBackgroundSize();
-  const keyFeatures = [
-    'Real-time visual processing',
-    'Obstacle detection',
-    'Voice commands',
-    'Natural language AI',
-  ];
-
-  const smartIntegration = [
-    'Cloud synchronization',
-    'Multi-device support',
-    'Seamless handoff',
-    'Smart notifications',
-  ];
 
   return (
     <section id="products" className={`section-padding-large ${style.vh120} bg-black position-relative`}>

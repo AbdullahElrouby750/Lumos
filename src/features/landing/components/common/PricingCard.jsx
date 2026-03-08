@@ -26,13 +26,13 @@ export function PricingCard({ plan }) {
         <div>
 
           <div className="mb-3">
-            <h3 className="h4 text-white mb-1">{name}</h3>
+            <h3 className="h4 text-white mb-1 fw-bolder">{name}</h3>
             <p className="text-secondary small mb-0">{description}</p>
           </div>
 
           {/* Pricing */}
           <div className="mb-3">
-            <p className="display-5 text-white mb-0">{price}</p>
+            <p className="display-5 text-white mb-0 fw-bold">{price}</p>
             <p className="text-secondary small">{period}</p>
           </div>
 
