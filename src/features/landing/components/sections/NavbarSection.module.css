@@ -1,0 +1,16 @@
+.navLink {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: var(--brand-color) !important;
+}
+
+.navLink:focus {
+    background-color: transparent !important;
+    border: none !important;
+    color: var(--brand-color) !important;
+    box-shadow: none !important;
+    outline: none !important;
+}

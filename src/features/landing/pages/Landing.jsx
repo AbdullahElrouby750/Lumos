@@ -26,7 +26,7 @@ import LomoSection from '../components/sections/LomoSection';
 export function Landing() {
   return (
     <div className=" w-100 d-flex flex-column justify-content-center">
-      {/* <NavbarSection /> */}
+      <NavbarSection />
       <HeroSection />
       <FeaturesSection />
       <ComponentsSection />

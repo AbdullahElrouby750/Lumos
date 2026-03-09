@@ -9,7 +9,7 @@
  */
 export function CTASection() {
   return (
-    <section className="section-padding-large" style={{
+    <section id="contact-us" className="section-padding-large" style={{
       background: 'linear-gradient(135deg, rgba(255,69,0,0.2), #121212)'
     }}>
       <div className="container-custom">
