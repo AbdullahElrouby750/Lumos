@@ -1,33 +1,41 @@
 import { FAQ_DATA } from '../../../../constants/landing-constants';
 import FAQAccordion from '../common/FAQAccordion';
 
-import { Accordion } from 'react-bootstrap';
-
 /**
  * FAQSection
- * List of FAQ items using FAQAccordion
- * - Dark background section
+ * Frequently Asked Questions section with custom accordion design
+ * - Dark background with modern dark-mode styling
+ * - Custom accordion items with plus/minus icons
+ * - Responsive layout
  */
 export function FAQSection() {
   return (
     <section id="faq" className="section-padding-large bg-black">
       <div className="container-custom">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center mb-5">
           <h2 className="display-5 fw-bold">
             Frequently Asked <span className="text-orange-lumos">Questions</span>
           </h2>
-          <p className="text-secondary lead mx-auto" style={{ maxWidth: '36rem' }}>
-            Your most common questions answered about Lumos, technology, and usage
+          <p
+            className="text-secondary lead mx-auto"
+            style={{
+              maxWidth: '100%',
+              fontSize: '0.85rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Understanding how Lumos empowers independence through technology
           </p>
         </div>
 
-        {/* Accordions */}
-        <Accordion>
+        {/* FAQ Items Container */}
+        <div>
           {FAQ_DATA.map((item) => (
             <FAQAccordion key={item.id} item={item} />
           ))}
-        </Accordion>
+        </div>
       </div>
     </section>
   );

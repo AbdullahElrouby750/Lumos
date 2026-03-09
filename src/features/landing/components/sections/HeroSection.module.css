@@ -52,3 +52,283 @@
 .customGray{
     color: hsla(218, 11%, 65%, 1)!important;
 }
+
+/* ==================== */
+/* RESPONSIVE CLASSES   */
+/* ==================== */
+
+/* Section Height Responsive */
+.sectionHeightDesktop {
+  height: 120vh;
+}
+
+@media (max-width: 1199px) {
+  .sectionHeightDesktop {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .sectionHeightDesktop {
+    height: auto;
+    min-height: auto;
+  }
+}
+
+/* Headline Font Sizes */
+.headlineDesktop {
+  font-size: 96.6px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+@media (max-width: 1199px) {
+  .headlineDesktop {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .headlineDesktop {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .headlineDesktop {
+    font-size: 32px;
+  }
+}
+
+/* "Limits" Word Font Sizes */
+.limitsWord {
+  font-size: 150px;
+  line-height: 1.1;
+  font-weight: 700;
+  display: inline;
+}
+
+@media (max-width: 1199px) {
+  .limitsWord {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .limitsWord {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 575px) {
+  .limitsWord {
+    font-size: 60px;
+  }
+}
+
+/* Smart Assistant Card Responsive */
+.smartAssistantCard {
+  width: 65%;
+  max-width: 65%;
+  height: 55%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+  .smartAssistantCard {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .smartAssistantCard {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 280px;
+    margin-top: 2rem;
+  }
+}
+
+/* Stats Container - Responsive */
+.statsContainer {
+  width: 90%;
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1199px) {
+  .statsContainer {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .statsContainer {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+}
+
+/* Individual Stat Card */
+.statCard {
+  width: 30%;
+  min-height: 120px;
+}
+
+@media (max-width: 1199px) {
+  .statCard {
+    width: calc(50% - 0.5rem);
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .statCard {
+    width: calc(50% - 0.375rem);
+    min-height: 90px;
+    padding: 1rem !important;
+  }
+}
+
+/* Hero Description Responsive */
+.heroDescription {
+  font-size: 14px;
+  line-height: 1.2;
+  width: 75%;
+}
+
+@media (max-width: 1199px) {
+  .heroDescription {
+    font-size: 13px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .heroDescription {
+    font-size: 12px;
+    width: 100%;
+    line-height: 1.4;
+  }
+}
+
+/* Button Container Responsive */
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+  .buttonContainer {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Right Column Container */
+.rightColumnContainer {
+  height: 100%;
+}
+
+@media (max-width: 1199px) {
+  .rightColumnContainer {
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .rightColumnContainer {
+    height: auto;
+    margin-top: 2rem;
+    order: 2;
+  }
+}
+
+/* Left Column Container */
+.leftColumnContainer {
+  height: 75%;
+}
+
+@media (max-width: 1199px) {
+  .leftColumnContainer {
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .leftColumnContainer {
+    height: auto;
+    order: 1;
+  }
+}
+
+/* Cards Wrapper */
+.cardsWrapper {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+@media (max-width: 1199px) {
+  .cardsWrapper {
+    height: auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .cardsWrapper {
+    height: auto;
+    justify-content: center;
+  }
+}
+
+/* Stats Wrapper */
+.statsWrapper {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 1199px) {
+  .statsWrapper {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .statsWrapper {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}

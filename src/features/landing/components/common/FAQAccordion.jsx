@@ -1,27 +1,61 @@
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-
-import { Accordion } from 'react-bootstrap';
+import style from './FAQAccordion.module.css';
 
 /**
- * FAQAccordion
- * Expandable FAQ item
- * - Question always visible
- * - Click to expand/collapse answer
- * - Smooth animation
- * - Chevron icon rotates
- * - Orange accent on active
+ * FAQAccordion Component
+ * Individual expandable FAQ item with dark mode design
+ * - Custom component using React useState for state management
+ * - Plus icon (+) that rotates 45deg on expand
+ * - Smooth max-height animation for answer reveal
+ * - Orange glow on hover and active states
+ * - Full keyboard accessibility support (Enter/Space keys)
+ * - ARIA attributes for screen readers
+ *
+ * @param {Object} item - FAQ item with question and answer properties
+ * @param {string} item.id - Unique identifier
+ * @param {string} item.question - Question text
+ * @param {string} item.answer - Answer text
  */
 export function FAQAccordion({ item }) {
+  const [isOpen, setIsOpen] = useState(false);
   const { question, answer } = item;
-  // We'll let parent Accordion handle state, so just render an Accordion.Item
+
+  /**
+   * Toggle accordion open/closed state
+   */
+  const handleToggle = () => setIsOpen(!isOpen);
+
+  /**
+   * Handle keyboard accessibility
+   * Support Enter and Space keys for toggling
+   */
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      setIsOpen(!isOpen);
+    }
+  };
+
   return (
-    <Accordion.Item eventKey={item.id.toString()} className="card-dark border-0 mb-2">
-      <Accordion.Header className="text-white fw-semibold">{question}</Accordion.Header>
-      <Accordion.Body className="text-secondary">
-        {answer}
-      </Accordion.Body>
-    </Accordion.Item>
+    <div
+      className={`${style.accordionItem} ${isOpen ? style.active : ''}`}
+      onClick={handleToggle}
+      onKeyPress={handleKeyPress}
+      role="button"
+      tabIndex={0}
+      aria-expanded={isOpen}
+    >
+      {/* Header - Question and Icon */}
+      <div className={style.accordionHeader}>
+        <span>{question}</span>
+        <span className={style.icon}>+</span>
+      </div>
+
+      {/* Body - Answer Content */}
+      <div className={style.accordionBody}>
+        <p className={style.accordionBodyText}>{answer}</p>
+      </div>
+    </div>
   );
 }
 

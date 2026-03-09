@@ -12,7 +12,7 @@ import Agent_AI_Avatar from '../../../../assets/Agent_AI_Avatar.svg';
  */
 export function HeroSection() {
   return (
-    <section id="hero" className={`section-padding-large position-relative overflow-hidden p-0 ${style.vh120} d-flex justify-content-center align-items-center`}>
+    <section id="hero" className={`section-padding-large position-relative overflow-hidden p-0 ${style.sectionHeightDesktop} d-flex justify-content-center align-items-center`}>
       {/* Gradient background effect */}
       <div className="position-absolute top-0 start-0 w-100 h-100 bg-black " />
 
@@ -20,17 +20,17 @@ export function HeroSection() {
       <div className={`container-custom position-relative z-10 ${style.w90} h-100`}>
         <div className="row align-items-center gx-5 gy-4 h-100">
           {/* Left: Content */}
-          <div className="col-12 col-lg-6 d-flex flex-column justify-content-between h-75">
+          <div className={`col-12 col-lg-6 d-flex flex-column justify-content-between ${style.leftColumnContainer}`}>
             <div>
 
               <div className="mb-4">
-                <p className=" display-1 text-light fw-bolder pb-0 mb-0" style={{fontSize: '96.6px', fontFamily: ""}}>
+                <p className={`display-1 text-light fw-bolder pb-0 mb-0 ${style.headlineDesktop}`}>
                   See Beyond<br />
-                  <span className="text-orange-lumos pt-0 mt-0" style={{fontSize: '150px'}}>Limits</span>
+                  <span className={`text-orange-lumos pt-0 mt-0 ${style.limitsWord}`}>Limits</span>
                 </p>
               </div>
 
-              <p className=" lead text-light mb-4 w-75" style={{ fontSize: '14px', lineHeight: '1.2' }}>
+              <p className={`lead text-light mb-4 ${style.heroDescription}`}>
                 Lumos is an intelligent accessibility system designed to support blind and low-vision users with greater independence, awareness, and comfort. It connects seamlessly, offering real-time guidance, voice interaction, and smart assistance whenever needed.
               </p>
             </div>
@@ -39,17 +39,16 @@ export function HeroSection() {
 
 
             {/* CTA Buttons */}
-            <div className="d-flex flex-wrap gap-3 mb-5 align-self-center">
+            <div className={`d-flex flex-wrap gap-3 mb-5 align-self-center ${style.buttonContainer}`}>
               <button className="btn btn-secondary ">Explore products</button>
               <button className="btn btn-primary ">View pricing plan</button>
             </div>
           </div>
 
           {/* Right: Image Placeholder */}
-          <div className="col-12 col-lg-6 d-none d-lg-flex flex-column  h-100">
-            <div className=' w-100 h-75 d-flex align-items-center justify-content-end position-relative '>
-              {/* need the hight to be exactly = the width */}
-              <div className={`position-relative rounded-4 glassmorphism ${style.w65} ${style.h65} d-flex flex-column align-items-center justify-content-around py-2 px-3`} >
+          <div className={`col-12 col-lg-6 d-flex flex-column ${style.rightColumnContainer}`}>
+            <div className={`w-100 d-flex align-items-center justify-content-end position-relative ${style.cardsWrapper}`}>
+              <div className={`mb-2 mb-xl-0 position-relative rounded-4 glassmorphism d-flex flex-column align-items-center justify-content-around py-2 px-3 ${style.smartAssistantCard}`} >
 
                 <div className=' w-100 d-flex justify-content-around align-items-center'>
                   <div className=' d-flex justify-content-center border border-orange-lumos rounded-circle overflow-hidden'>
@@ -81,19 +80,19 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-            <div className={` ${style.w90} h-25 d-flex align-items-center justify-content-around`}>
-                <div className={` pt-1 ${style.w30} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center`}>
-                  <p className="h2 text-orange-lumos fw-bold">360°</p>
-                  <p className={`small ${style.customGray}`}>Obstacle Detection</p>
-                </div>
-                <div className={` pt-1 ${style.w30} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center`}>
-                  <p className="h2 text-orange-lumos fw-bold">24/7</p>
-                  <p className={`small ${style.customGray}`}>Smart Assistance</p>
-                </div>
-                <div className={` pt-1 ${style.w30} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center`}>
-                  <p className="h2 text-orange-lumos fw-bold">100%</p>
-                  <p className={`small ${style.customGray}`}> Safety Confidence</p>
-                </div>
+            <div className={`${style.statsWrapper}`}>
+              <div className={`pt-1 ${style.statCard} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center mx-md-1 mx-xl-0`}>
+                <p className="h2 text-orange-lumos fw-bold">360°</p>
+                <p className={`small ${style.customGray}`}>Obstacle Detection</p>
+              </div>
+              <div className={`pt-1 ${style.statCard} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center mx-md-1 mx-xl-0`}>
+                <p className="h2 text-orange-lumos fw-bold">24/7</p>
+                <p className={`small ${style.customGray}`}>Smart Assistance</p>
+              </div>
+              <div className={`pt-1 ${style.statCard} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center mt-2 mt-xl-0`}>
+                <p className="h2 text-orange-lumos fw-bold">100%</p>
+                <p className={`small ${style.customGray}`}> Safety Confidence</p>
+              </div>
             </div>
 
           </div>
@@ -102,12 +101,17 @@ export function HeroSection() {
         {/* Mobile Image */}
         <div className="d-lg-none mt-4">
           <div className="position-relative" style={{ width: '100%', paddingTop: '56.25%' }}>
-            <div className="position-absolute top-0 start-0 w-100 h-100 rounded-3 border glow-orange" style={{
+            <div className="position-absolute top-0 start-0 w-100 h-100 rounded-3  glow-orange" style={{
               background: 'linear-gradient(135deg, rgba(255,69,0,0.2), #121212)',
-              borderColor: 'rgba(255,69,0,0.3)'
+              borderColor: 'rgba(255,69,0,0.3)',
+              backgroundImage: `url(${bgImg})`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat'
             }} />
-            <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-              <div className="text-center">
+            <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center overflow-hidden rounded-5">
+
+              {/* <div className="text-center">
                 <div className="bg-orange-lumos bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center border" style={{
                   width: '5rem',
                   height: '5rem',
@@ -124,7 +128,7 @@ export function HeroSection() {
                   </svg>
                 </div>
                 <p className="text-secondary fw-medium small mt-2">Smart Glasses</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
