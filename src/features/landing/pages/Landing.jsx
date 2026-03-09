@@ -4,6 +4,7 @@ import FeaturesSection from '../components/sections/FeaturesSection';
 import ComponentsSection from '../components/sections/ComponentsSection';
 import PricingSection from '../components/sections/PricingSection';
 import TeamSection from '../components/sections/TeamSection';
+import StorySection from '../components/sections/StorySection';
 import FAQSection from '../components/sections/FAQSection';
 import CTASection from '../components/sections/CTASection';
 import FooterSection from '../components/sections/FooterSection';
@@ -24,7 +25,7 @@ import LomoSection from '../components/sections/LomoSection';
  */
 export function Landing() {
   return (
-    <div className="">
+    <div className=" w-100 d-flex flex-column justify-content-center">
       {/* <NavbarSection /> */}
       <HeroSection />
       <FeaturesSection />
@@ -32,6 +33,7 @@ export function Landing() {
       <LomoSection />
       <PricingSection />
       <TeamSection />
+      <StorySection />
       <FAQSection />
       <CTASection />
       <FooterSection />

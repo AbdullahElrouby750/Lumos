@@ -3,6 +3,10 @@
     height: 120vh;
 }
 
+.vh100{
+    height: 100vh;
+}
+
 .w90{
     width: 90%!important;
     max-width: 90%!important;
@@ -11,6 +15,8 @@
     width: 85%!important;
     max-width: 85%!important;
 }
+
+
 
 .w65{
     width: 65%!important;
@@ -37,7 +43,9 @@
     height: 85%!important;
 }
 
-
+.h70{
+    height: 70%!important;
+}
 .h65{
     height: 55%!important;
 }

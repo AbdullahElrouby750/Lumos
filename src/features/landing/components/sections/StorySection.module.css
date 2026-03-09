@@ -1,0 +1,332 @@
+/* Section height and width utilities */
+.contentWrapper {
+    width: 85%;
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    z-index: 1;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 2rem;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.storyBadge {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid var(--brand-color);
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--brand-color);
+    text-transform: uppercase;
+    background: hsl(25, 100%, 50%, 10%);
+    margin-bottom: 1.5rem;
+}
+
+.headline {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--custom-gray);
+    margin-bottom: 3rem;
+    max-width: 90%;
+    font-weight: 600;
+}
+
+.infoBadges {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.infoBadge {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.infoBadgeLabel {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brand-color);
+}
+
+.infoBadgeValue {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.05em;
+}
+
+.missionCard {
+    border: 1px solid hsla(17, 20%, 24%, 0.7);
+    border-radius: 1rem;
+    padding: 2.5rem 2.5rem 4rem 2.5rem;  
+    height: 45rem;
+    /* min-height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    background: hsl(25, 100%, 50%, 10%);
+}
+
+.missionHeader {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brand-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 69, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.missionDot {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--brand-color);
+    flex-shrink: 0;
+}
+
+.missionStar{
+    background-image: url('../../../../assets/cardStar.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+
+.missionText {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: hsla(218, 11%, 65%, 1);
+    margin-bottom: 2.5rem;
+}
+
+.metricsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 2rem;
+}
+
+.metricRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metricLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--custom-gray);
+}
+
+.metricValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--brand-color);
+    font-family: 'Courier New', monospace;
+}
+
+.videoBorder{
+    border: 1px solid hsla(17, 20%, 24%, 0.7);
+}
+
+.playButton {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid var(--brand-color);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    margin-top: 1.5rem;
+    color: var(--brand-color);
+    font-size: 1.5rem;
+}
+
+.playButton:hover {
+    background-color: rgba(255, 69, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.statusBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 70%;
+    padding: 0.75rem 1.2rem;    
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    align-self: flex-end;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    transform: translate(10%,40%);
+    letter-spacing: 0.15em;
+    
+}
+
+.statusIcon {
+    background-image: url('../../../../assets/missioncardBottomIcon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2.7rem;
+    height: 2.5rem;
+    border-radius: 20%;
+    background-color: var(--brand-color);
+    flex-shrink: 0;
+}
+
+.blurCercilBg{
+    width: 384px;
+    height: 402.33px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(25, 100%, 50%, 20%) , rgba(255, 69, 0, 0) 70%);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+
+    .leftColumn,
+    .rightColumn {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .headline {
+        font-size: 2.25rem;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+
+    .missionCard {
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .contentWrapper {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 1.75rem;
+    }
+
+    .infoBadges {
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    .missionCard {
+        padding: 1.5rem;
+    }
+
+    .metricRow {
+        padding: 1rem 0;
+    }
+
+    .playButton {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .contentWrapper {
+        width: 95%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .headline {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .infoBadges {
+        gap: 1rem;
+    }
+
+    .missionCard {
+        padding: 1.25rem;
+    }
+
+    .statusBadge {
+        font-size: 0.65rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .contentWrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}

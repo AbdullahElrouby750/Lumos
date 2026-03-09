@@ -126,46 +126,100 @@ export const PRICING_PLANS = [
 export const TEAM_MEMBERS = [
   {
     id: 1,
-    name: 'Amelia Ross',
-    initials: 'AR',
-    role: 'Founder & CEO',
-    bio: 'Visionary technologist passionate about assistive AI',
+    name: 'Abdullah Elrouby',
+    initials: 'AE',
+    role: 'Frontend Developer',
+    link1: {
+      url: 'https://linkedin.com/in/abdullah-elrouby-803554245',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
   },
   {
     id: 2,
-    name: 'Marcus Chen',
-    initials: 'MC',
-    role: 'CTO',
-    bio: 'ML expert with 12+ years in computer vision',
+    name: 'Habiba Adel',
+    initials: 'HA',
+    role: 'Senior ML Engineer',
+    link1: {
+      url: 'https://linkedin.com/in/amelia-ross',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
   },
   {
     id: 3,
-    name: 'Sarah Johnson',
-    initials: 'SJ',
-    role: 'Product Lead',
-    bio: 'User-centered design strategist',
+    name: 'Henar Ahmed',
+    initials: 'HA',
+    role: 'UI/UX Designer',
+    link1: {
+      url: 'https://linkedin.com/in/amelia-ross',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
   },
   {
     id: 4,
-    name: 'David Kim',
-    initials: 'DK',
+    name: 'Diaa Oraby',
+    initials: 'DO',
     role: 'Hardware Engineer',
-    bio: 'IoT and embedded systems specialist',
+    link1: {
+      url: 'https://linkedin.com/in/amelia-ross',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
   },
   {
     id: 5,
-    name: 'Elena Rodriguez',
-    initials: 'ER',
-    role: 'UX Designer',
-    bio: 'Accessibility-first design advocate',
+    name: 'Alaa Saleh',
+    initials: 'AS',
+    role: 'Backend Developer',
+    link1: {
+      url: 'https://linkedin.com/in/amelia-ross',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
   },
   {
     id: 6,
-    name: 'James Wilson',
-    initials: 'JW',
-    role: 'Operations',
-    bio: 'Project management and partnerships',
+    name: 'Mahmoud Salah',
+    initials: 'MS',
+    role: 'Backend Developer',
+    link1: {
+      url: 'https://linkedin.com/in/amelia-ross',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
   },
+  {
+    id: 7, 
+    name: 'Sara Nawam',
+    initials: 'SN',
+    role: 'Flutter Developer',
+    link1: {
+      url: 'https://linkedin.com/in/amelia-ross',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
+  },
+  {
+    id: 8, 
+    name: 'Mahmoud Bakr',
+    initials: 'MB',
+    role: 'Hardware Engineer',
+    link1: {
+      url: 'https://linkedin.com/in/amelia-ross',
+    },
+    link2: {
+      url: 'https://twitter.com/ameliaross',
+    }
+  }
 ];
 
 export const FAQ_DATA = [
@@ -230,6 +284,6 @@ export const FOOTER_LINKS = {
 
 export const SOCIAL_LINKS = [
   { label: 'GitHub', icon: 'Github', url: 'https://github.com' },
-  { label: 'LinkedIn', icon: 'Linkedin', url: 'https://linkedin.com' },
-  { label: 'Twitter', icon: 'Twitter', url: 'https://twitter.com' },
+  { label: 'LinkedIn', icon: 'https://linkedin.com', url: 'https://linkedin.com' },
+  { label: 'Twitter', icon: 'https://twitter.com', url: 'https://twitter.com' },
 ];
