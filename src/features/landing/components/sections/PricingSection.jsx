@@ -140,7 +140,7 @@ export function PricingSection() {
             </motion.div>
 
             {comparisonFeatures.map((row, index) => (
-              <div key={index} className="card card-dark p-3 mb-3"
+              <motion.div key={index} className="card card-dark p-3 mb-3"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}>
@@ -150,7 +150,7 @@ export function PricingSection() {
                   <Col>{typeof row.premium === 'boolean' ? (row.premium ? <Check className="text-orange-lumos" /> : <span className="text-muted">—</span>) : <span className="text-secondary">{row.premium}</span>}</Col>
                   <Col>{typeof row.professional === 'boolean' ? (row.professional ? <Check className="text-orange-lumos" /> : <span className="text-muted">—</span>) : <span className="text-secondary">{row.professional}</span>}</Col>
                 </Row>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

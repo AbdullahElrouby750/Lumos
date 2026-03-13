@@ -22,7 +22,7 @@ function LomoSection() {
       >
         {/* LEFT COLUMN - CONTENT */}
         <motion.div className={`d-flex flex-column justify-content-center align-items-start ${style.lomoLeftColumn}`}
-          initial={{ opacity: 0, x: -500 }} // Start off-screen left
+          initial={{ opacity: 0, x: -200 }} // Start off-screen left
           whileInView={{ opacity: 1, x: 0 }}    // End at normal position
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
 
@@ -58,7 +58,7 @@ function LomoSection() {
         <motion.div
           className={`d-flex flex-column justify-content-center align-items-center ${style.lomoRightColumn}`}
           style={{ backgroundImage: `url(${lomoBg})` }}
-          initial={{ opacity: 0, x: 500 }} // Start off-screen left
+          initial={{ opacity: 0, x: 200 }} // Start off-screen left
           whileInView={{ opacity: 1, x: 0 }}    // End at normal position
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
         >
