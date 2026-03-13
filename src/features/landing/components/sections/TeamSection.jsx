@@ -36,7 +36,7 @@ export function TeamSection() {
             <motion.div key={member.id} className={`col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center`}
             initial={{ opacity: 0, scale: 0.1 }}
             whileInView={{ opacity: 1,scale: 1 }}
-            transition={{ duration: 0.5, delay: index  *0.2, ease: 'easeOut' }}
+            transition={{ duration: 0.5, delay: index  *0.07, ease: 'easeOut' }}
             viewport={{ margin: '100px' }}>
             
               <TeamMemberCard member={member} />
