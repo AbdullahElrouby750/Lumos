@@ -1,3 +1,5 @@
+
+import { motion } from 'framer-motion'
 /**
  * CTASection
  * Final call-to-action
@@ -12,7 +14,10 @@ export function CTASection() {
     <section id="contact-us" className="section-padding-large" style={{
       background: 'linear-gradient(135deg, rgba(255,69,0,0.2), #121212)'
     }}>
-      <div className="container-custom">
+      <motion.div className="container-custom"
+      initial={{ opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
         <div className="mx-auto text-center" style={{ maxWidth: '40rem' }}>
           <h2 className="display-5 fw-bold">
             Let's <span className="text-orange-lumos">Illuminate</span> the Future
@@ -43,7 +48,7 @@ export function CTASection() {
             </form>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

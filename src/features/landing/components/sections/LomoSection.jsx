@@ -1,6 +1,7 @@
 import style from './LomoSection.module.css';
 import lomoBg from '../../../../assets/lomoBg.svg';
 import lomoVoiceShape from '../../../../assets/lomoVoiceShape.svg';
+import { motion } from 'framer-motion';
 
 /**
  * LomoSection
@@ -11,17 +12,20 @@ import lomoVoiceShape from '../../../../assets/lomoVoiceShape.svg';
  */
 function LomoSection() {
   return (
-    <section 
-      id='lomo' 
+    <section
+      id='lomo'
       className={`bg-black position-relative d-flex justify-content-center align-items-center ${style.lomoSection}`}
     >
-      <div 
+      <div
         className={`d-flex overflow-hidden ${style.lomoCard}`}
-        style={{ backgroundImage: `url(${lomoBg})` , backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}
+        style={{ backgroundImage: `url(${lomoBg})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
       >
         {/* LEFT COLUMN - CONTENT */}
-        <div className={`d-flex flex-column justify-content-center align-items-start ${style.lomoLeftColumn}`}>
-          
+        <motion.div className={`d-flex flex-column justify-content-center align-items-start ${style.lomoLeftColumn}`}
+          initial={{ opacity: 0, x: -500 }} // Start off-screen left
+          whileInView={{ opacity: 1, x: 0 }}    // End at normal position
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+
           {/* Tagline */}
           <p className={`text-orange-lumos text-start ${style.lomoTagline}`}>
             POWERED BY ADVANCED AI
@@ -37,29 +41,32 @@ function LomoSection() {
 
           {/* Description 1 - OPTIMIZED */}
           <p className={`text-white fw-normal text-start ${style.lomoDescription}`}>
-            Lumo is your intelligent voice assistant designed to bring clarity, 
-            independence, and reassurance. More than just a voice, it's a constant 
+            Lumo is your intelligent voice assistant designed to bring clarity,
+            independence, and reassurance. More than just a voice, it's a constant
             presence—listening, guiding, and responding with calm, reliable support.
           </p>
 
           {/* Description 2 - OPTIMIZED */}
           <p className={`text-white fw-normal text-start ${style.lomoDescription}`}>
-            Powered by advanced AI, Lumo understands natural speech and communicates 
-            clearly. It offers guidance and manages connected tools—quietly working in 
+            Powered by advanced AI, Lumo understands natural speech and communicates
+            clearly. It offers guidance and manages connected tools—quietly working in
             the background to keep you informed and supported.
           </p>
-        </div>
+        </motion.div>
 
         {/* RIGHT COLUMN - VOICE VISUAL */}
-        <div 
+        <motion.div
           className={`d-flex flex-column justify-content-center align-items-center ${style.lomoRightColumn}`}
           style={{ backgroundImage: `url(${lomoBg})` }}
+          initial={{ opacity: 0, x: 500 }} // Start off-screen left
+          whileInView={{ opacity: 1, x: 0 }}    // End at normal position
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
         >
           {/* Voice Icon */}
           <div className={style.lomoVoiceIconWrapper}>
-            <img 
-              className='w-100' 
-              src={lomoVoiceShape} 
+            <img
+              className='w-100'
+              src={lomoVoiceShape}
               alt="Lomo Voice Shape"
             />
           </div>
@@ -68,7 +75,7 @@ function LomoSection() {
           <p className={`text-orange-lumos text-center ${style.lomoListeningText}`}>
             lUMO IS LISTNING . . . . . .
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

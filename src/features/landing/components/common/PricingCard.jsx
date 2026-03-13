@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react';
+import { motion } from 'framer-motion'
 
 /**
  * PricingCard
@@ -8,12 +9,16 @@ import { Check } from 'lucide-react';
  * - CTA button
  * - Premium card is highlighted/scaled
  */
-export function PricingCard({ plan }) {
+export function PricingCard({ plan, index = 1 }) {
   const { name, price, period, description, features, highlighted, cta } = plan;
 
   return (
-    <div className={`card card-dark position-relative h-100 ${highlighted ? 'border-2 border-orange-lumos shadow-lg' : ''}`}
-      style={highlighted ? { transform: 'scale(1.05)' } : {}}>
+    <motion.div className={`card card-dark position-relative h-100 ${highlighted ? 'border-2 border-orange-lumos shadow-lg' : ''}`}
+      style={highlighted ? { transform: 'scale(1.05)' } : {}}
+      initial={{ opacity: 0 }} // Start off-screen left
+      whileInView={{ opacity: 1}}    // End at normal position
+      transition={{ duration: 0.5, delay: index * 0.3, ease: 'easeOut' }}
+    >
       {/* Highlighted Badge */}
       {highlighted && (
         <span className="badge bg-orange-lumos text-dark position-absolute" style={{ top: '-0.5rem', right: '-0.5rem' }}>
@@ -57,7 +62,7 @@ export function PricingCard({ plan }) {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

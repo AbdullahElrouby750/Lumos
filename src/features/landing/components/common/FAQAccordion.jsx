@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './FAQAccordion.module.css';
+import { motion } from 'framer-motion'
 
 /**
  * FAQAccordion Component
@@ -16,7 +17,7 @@ import style from './FAQAccordion.module.css';
  * @param {string} item.question - Question text
  * @param {string} item.answer - Answer text
  */
-export function FAQAccordion({ item }) {
+export function FAQAccordion({ item, index }) {
   const [isOpen, setIsOpen] = useState(false);
   const { question, answer } = item;
 
@@ -37,13 +38,16 @@ export function FAQAccordion({ item }) {
   };
 
   return (
-    <div
+    <motion.div
       className={`${style.accordionItem} ${isOpen ? style.active : ''}`}
       onClick={handleToggle}
       onKeyPress={handleKeyPress}
       role="button"
       tabIndex={0}
       aria-expanded={isOpen}
+      initial={{ opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}
     >
       {/* Header - Question and Icon */}
       <div className={style.accordionHeader}>
@@ -55,7 +59,7 @@ export function FAQAccordion({ item }) {
       <div className={style.accordionBody}>
         <p className={style.accordionBodyText}>{answer}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

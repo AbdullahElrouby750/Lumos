@@ -1,6 +1,7 @@
 import style from './HeroSection.module.css';
 import bgImg from '../../../../assets/herobg.svg';
 import Agent_AI_Avatar from '../../../../assets/Agent_AI_Avatar.svg';
+import { motion } from 'framer-motion';
 /**
  * HeroSection
  * Hero banner with:
@@ -20,35 +21,48 @@ export function HeroSection() {
       <div className={`container-custom position-relative z-10 ${style.w90} h-100`}>
         <div className="row align-items-center gx-5 gy-4 h-100">
           {/* Left: Content */}
-          <div className={`col-12 col-lg-6 d-flex flex-column justify-content-between ${style.leftColumnContainer}`}>
+          <motion.div className={`col-12 col-lg-6 d-flex flex-column justify-content-between ${style.leftColumnContainer}`}>
             <div>
 
               <div className="mb-4">
-                <p className={`display-1 text-light fw-bolder pb-0 mb-0 ${style.headlineDesktop}`}>
+                <motion.p className={`display-1 text-light fw-bolder pb-0 mb-0 ${style.headlineDesktop}`}
+                  initial={{ opacity: 0, x: -500 }} // Start off-screen left
+                  animate={{ opacity: 1, x: 0 }}    // End at normal position
+                  transition={{ duration: 0.5, delay:0.1, ease: 'easeOut' }}
+                >
                   See Beyond<br />
                   <span className={`text-orange-lumos pt-0 mt-0 ${style.limitsWord}`}>Limits</span>
-                </p>
+                </motion.p>
               </div>
 
-              <p className={`lead text-light mb-4 ${style.heroDescription}`}>
+              <motion.p className={`lead text-light mb-4 ${style.heroDescription}`}
+                initial={{ opacity: 0, x: -500 }} // Start off-screen left
+                animate={{ opacity: 1, x: 0 }}    // End at normal position
+                transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}>
                 Lumos is an intelligent accessibility system designed to support blind and low-vision users with greater independence, awareness, and comfort. It connects seamlessly, offering real-time guidance, voice interaction, and smart assistance whenever needed.
-              </p>
+              </motion.p>
             </div>
 
             {/* Stats */}
 
 
             {/* CTA Buttons */}
-            <div className={`d-flex flex-wrap gap-3 mb-5 align-self-center ${style.buttonContainer}`}>
+            <motion.div className={`d-flex flex-wrap gap-3 mb-5 align-self-center ${style.buttonContainer}`}
+              initial={{ opacity: 0, x: -500 }} // Start off-screen left
+              animate={{ opacity: 1, x: 0 }}    // End at normal position
+              transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}>
               <button className="btn btn-secondary ">Explore products</button>
               <button className="btn btn-primary ">View pricing plan</button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right: Image Placeholder */}
           <div className={`col-12 col-lg-6 d-flex flex-column ${style.rightColumnContainer}`}>
             <div className={`w-100 d-flex align-items-center justify-content-end position-relative ${style.cardsWrapper}`}>
-              <div className={`mb-2 mb-xl-0 position-relative rounded-4 glassmorphism d-flex flex-column align-items-center justify-content-around py-2 px-3 ${style.smartAssistantCard}`} >
+              <motion.div className={`mb-2 mb-xl-0 position-relative rounded-4 glassmorphism d-flex flex-column align-items-center justify-content-around py-2 px-3 ${style.smartAssistantCard}`}
+                initial={{ opacity: 0, x: 500 }} // Start off-screen left
+                animate={{ opacity: 1, x: 0 }}    // End at normal position
+                transition={{ duration: 0.5, delay: 0.7, ease: 'easeOut' }}>
 
                 <div className=' w-100 d-flex justify-content-around align-items-center'>
                   <div className=' d-flex justify-content-center border border-orange-lumos rounded-circle overflow-hidden'>
@@ -78,9 +92,13 @@ export function HeroSection() {
                     Try Voice Demo
                   </button>
                 </div>
-              </div>
+              </motion.div>
             </div>
-            <div className={`${style.statsWrapper}`}>
+            <motion.div className={`${style.statsWrapper}`}
+              initial={{ opacity: 0, x: 500 }} // Start off-screen left
+              animate={{ opacity: 1, x: 0 }}    // End at normal position
+              transition={{ duration: 0.5, delay: 0.9, ease: 'easeOut' }}
+            >
               <div className={`pt-1 ${style.statCard} glassmorphism rounded-3 border border-dark d-flex flex-column align-items-center justify-content-center mx-md-1 mx-xl-0`}>
                 <p className="h2 text-orange-lumos fw-bold">360°</p>
                 <p className={`small ${style.customGray}`}>Obstacle Detection</p>
@@ -93,7 +111,7 @@ export function HeroSection() {
                 <p className="h2 text-orange-lumos fw-bold">100%</p>
                 <p className={`small ${style.customGray}`}> Safety Confidence</p>
               </div>
-            </div>
+            </motion.div>
 
           </div>
         </div>

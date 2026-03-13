@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player';
 import style from './StorySection.module.css';
 import vid from '../../../../assets/vid.mp4'
 import { Suspense } from 'react';
+import { motion } from 'framer-motion';
 
 /**
  * StorySection
@@ -30,17 +31,26 @@ export function StorySection() {
                             </div>
 
                             {/* Headline */}
-                            <h2 className={style.headline}>
+                            <motion.h2 className={style.headline}
+                                initial={{ opacity: 0, y: 100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
                                 Architecting the <span className="text-orange-lumos">Future</span> of Human Mobility
-                            </h2>
+                            </motion.h2>
 
                             {/* Description */}
-                            <p className={style.description}>
+                            <motion.p className={style.description}
+                                initial={{ opacity: 0, y: 100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
                                 Founded at the intersection of empathy and deep tech, Team Nova is dedicated to breaking barriers for the visually impaired. We don't just build hardware; we craft intelligent companions that help people navigate the world with confidence and dignity.
-                            </p>
+                            </motion.p>
 
                             {/* Info Badges */}
-                            <div className={style.infoBadges}>
+                            <motion.div className={style.infoBadges}
+                                initial={{ opacity: 0, y: 100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
                                 <div className={style.infoBadge}>
                                     <span className={style.infoBadgeLabel}>Established</span>
                                     <span className={style.infoBadgeValue}>2026 // GRAD_PROJ</span>
@@ -49,13 +59,16 @@ export function StorySection() {
                                     <span className={style.infoBadgeLabel}>Location</span>
                                     <span className={style.infoBadgeValue}>Alexandria // EGYPT</span>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
 
                     {/* RIGHT COLUMN */}
                     <div className="col-12 col-lg-5 offset-lg-1">
-                        <div className={style.missionCard}>
+                        <motion.div className={style.missionCard}
+                                initial={{ opacity: 0, y:-100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
                             <div className={style.missionStar}></div>
                             {/* Mission Header */}
                             <div className={style.missionHeader}>
@@ -108,7 +121,7 @@ export function StorySection() {
                                     ACTIVE_PROTOTYPE
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
