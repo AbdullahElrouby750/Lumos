@@ -17,11 +17,13 @@ import LomoSection from '../components/sections/LomoSection';
  * 2. Hero
  * 3. Features
  * 4. Components Showcase
- * 5. Pricing
- * 6. Team
- * 7. FAQ
- * 8. CTA
- * 9. Footer
+ * 5. Lomo
+ * 6. Pricing
+ * 7. Team
+ * 8. About
+ * 9. FAQ
+ * 10. CTA
+ * 11. Footer
  */
 export function Landing() {
   return (

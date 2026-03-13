@@ -1,5 +1,6 @@
 import { FAQ_DATA } from '../../../../constants/landing-constants';
 import FAQAccordion from '../common/FAQAccordion';
+import { motion } from 'framer-motion'
 
 /**
  * FAQSection
@@ -13,7 +14,10 @@ export function FAQSection() {
     <section id="faq" className="section-padding-large bg-black">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-5">
+        <motion.div className="text-center mb-5"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
           <h2 className="display-5 fw-bold">
             Frequently Asked <span className="text-orange-lumos">Questions</span>
           </h2>
@@ -28,12 +32,12 @@ export function FAQSection() {
           >
             Understanding how Lumos empowers independence through technology
           </p>
-        </div>
+        </motion.div>
 
         {/* FAQ Items Container */}
         <div>
-          {FAQ_DATA.map((item) => (
-            <FAQAccordion key={item.id} item={item} />
+          {FAQ_DATA.map((item, index) => (
+            <FAQAccordion key={item.id} item={item} index={index}/>
           ))}
         </div>
       </div>
