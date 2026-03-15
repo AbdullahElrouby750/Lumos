@@ -17,7 +17,7 @@ export function TeamSection() {
         {/* Header */}
         <div className="text-center mb-5">
           <motion.h2 className="display-4 fw-bold"
-            initial={{ opacity: 0, x: -500 }}
+            initial={{ opacity: 0, x: -200 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
             viewport={{ once: true }}>

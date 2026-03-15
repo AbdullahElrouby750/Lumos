@@ -32,7 +32,7 @@ export function PricingSection() {
       <div className="container-custom">
         {/* Header */}
         <motion.div className="text-start mb-5"
-          initial={{ opacity: 0, x: -500 }} // Start off-screen left
+          initial={{ opacity: 0, x: -200 }} // Start off-screen left
           whileInView={{ opacity: 1, x: 0 }}    // End at normal position
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
           viewport={{ once: true }}>
