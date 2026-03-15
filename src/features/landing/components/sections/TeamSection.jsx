@@ -19,13 +19,15 @@ export function TeamSection() {
           <motion.h2 className="display-4 fw-bold"
             initial={{ opacity: 0, x: -500 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+            viewport={{ once: true }}>
             The Minds Behind <span className="text-orange-lumos">Lumos</span>
           </motion.h2>
           <motion.p className=" customGray w-75 lead mx-auto"
             initial={{ opacity: 0, x: -500 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}>
+            transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
+            viewport={{ once: true }}>
             A dedicated team of engineers and designers crafting the future of assistive technology to empower the blind community.
           </motion.p>
         </div>
@@ -34,11 +36,11 @@ export function TeamSection() {
         <div className="row g-5 h-100 w-100 justify-content-center">
           {TEAM_MEMBERS.map((member, index) => (
             <motion.div key={member.id} className={`col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center`}
-            initial={{ opacity: 0, scale: 0.1 }}
-            whileInView={{ opacity: 1,scale: 1 }}
-            transition={{ duration: 0.5, delay: index  *0.2, ease: 'easeOut' }}
-            viewport={{ margin: '100px' }}>
-            
+              initial={{ opacity: 0, scale: 0.1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}
+              viewport={{ once: true, margin: '100px' }}>
+
               <TeamMemberCard member={member} />
             </motion.div>
           ))}

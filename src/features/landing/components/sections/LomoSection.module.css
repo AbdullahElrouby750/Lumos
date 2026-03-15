@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 120vh;
+  min-height: auto;
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #000000;

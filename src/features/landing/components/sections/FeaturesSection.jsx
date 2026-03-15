@@ -24,7 +24,7 @@ export function FeaturesSection() {
           initial={{ opacity: 0, y: -100 }} // Start off-screen left
           whileInView={{ opacity: 1, y: 0 }}    // End at normal position
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-          // viewport={{ once: true }}
+          viewport={{ once: true }}
         >
           <h2 className="display-5 fw-bold">
             Why <span className="text-orange-lumos">Lumos</span>?
@@ -41,6 +41,7 @@ export function FeaturesSection() {
               initial={{ opacity: 0, scale: 0.2 }} // Start off-screen left
               whileInView={{ opacity: 1, scale: 1 }}    // End at normal position
               transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}
+              viewport={{ once: true }}
 
             >
               <FeatureCard

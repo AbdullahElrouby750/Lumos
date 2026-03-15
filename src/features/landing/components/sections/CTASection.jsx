@@ -15,9 +15,10 @@ export function CTASection() {
       background: 'linear-gradient(135deg, rgba(255,69,0,0.2), #121212)'
     }}>
       <motion.div className="container-custom"
-      initial={{ opacity: 0}}
-      whileInView={{ opacity: 1}}
-      transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+        viewport={{ once: true }}>
         <div className="mx-auto text-center" style={{ maxWidth: '40rem' }}>
           <h2 className="display-5 fw-bold">
             Let's <span className="text-orange-lumos">Illuminate</span> the Future

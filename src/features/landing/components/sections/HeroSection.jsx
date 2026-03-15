@@ -24,8 +24,8 @@ export function HeroSection() {
           <motion.div className={`col-12 col-lg-6 d-flex flex-column justify-content-between ${style.leftColumnContainer}`}>
             <div>
 
-              <div className="mb-4">
-                <motion.p className={`display-1 text-light fw-bolder pb-0 mb-0 ${style.headlineDesktop}`}
+              <div className="mb-4 pt-5 ps-md-5">
+                <motion.p className={` text-light fw-bolder pb-0 mb-0 ${style.headlineDesktop}`}
                   initial={{ opacity: 0, x: -500 }} // Start off-screen left
                   animate={{ opacity: 1, x: 0 }}    // End at normal position
                   transition={{ duration: 0.5, delay:0.1, ease: 'easeOut' }}
@@ -35,12 +35,12 @@ export function HeroSection() {
                 </motion.p>
               </div>
 
-              <motion.p className={`lead text-light mb-4 ${style.heroDescription}`}
+              {/* <motion.p className={`lead text-light mb-4 ${style.heroDescription}`}
                 initial={{ opacity: 0, x: -500 }} // Start off-screen left
                 animate={{ opacity: 1, x: 0 }}    // End at normal position
                 transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}>
                 Lumos is an intelligent accessibility system designed to support blind and low-vision users with greater independence, awareness, and comfort. It connects seamlessly, offering real-time guidance, voice interaction, and smart assistance whenever needed.
-              </motion.p>
+              </motion.p> */}
             </div>
 
             {/* Stats */}

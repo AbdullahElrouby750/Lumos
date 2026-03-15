@@ -17,7 +17,8 @@ export function FAQSection() {
         <motion.div className="text-center mb-5"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true }}>
           <h2 className="display-5 fw-bold">
             Frequently Asked <span className="text-orange-lumos">Questions</span>
           </h2>
@@ -37,7 +38,7 @@ export function FAQSection() {
         {/* FAQ Items Container */}
         <div>
           {FAQ_DATA.map((item, index) => (
-            <FAQAccordion key={item.id} item={item} index={index}/>
+            <FAQAccordion key={item.id} item={item} index={index} />
           ))}
         </div>
       </div>

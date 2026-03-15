@@ -34,7 +34,8 @@ export function PricingSection() {
         <motion.div className="text-start mb-5"
           initial={{ opacity: 0, x: -500 }} // Start off-screen left
           whileInView={{ opacity: 1, x: 0 }}    // End at normal position
-          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true }}>
           <h2 className="display-4 fw-bold">
             Pricing <span className="text-orange-lumos">Plan</span>
           </h2>
@@ -58,7 +59,8 @@ export function PricingSection() {
           <motion.div className=" w-100 d-flex flex-column justify-content-between align-items-center mb-4"
             initial={{ opacity: 0 }} // Start off-screen left
             whileInView={{ opacity: 1 }}    // End at normal position
-            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+            viewport={{ once: true }}>
             <h3 className="h4 text-white">Compare Features</h3>
             <p className=" text-center text-secondary mx-auto" style={{ maxWidth: '36rem' }}>
               Explore how Lumos hardware and software work together to provide a safer, more independent life.
@@ -72,7 +74,8 @@ export function PricingSection() {
 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+                viewport={{ once: true }}>
                 <tr className=' border-dark'>
                   <th className=' fs-4 customGray fw-bold  py-4 bg-black'>Feature</th>
                   <th className=" fs-4 customGray fw-bold text-center bg-black py-4">Starter</th>
@@ -85,7 +88,8 @@ export function PricingSection() {
                   <motion.tr key={index} className="align-middle  thinBorder"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}>
+                    transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}
+                    viewport={{ once: true }}>
                     <td className="fw-medium bg-black py-4 border-0 fs-4">{row.feature}</td>
                     <td className="text-center bg-black py-4 border-0 fs-4">
                       {typeof row.starter === 'boolean' ? (

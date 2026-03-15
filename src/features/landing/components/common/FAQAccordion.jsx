@@ -45,9 +45,10 @@ export function FAQAccordion({ item, index }) {
       role="button"
       tabIndex={0}
       aria-expanded={isOpen}
-      initial={{ opacity: 0}}
-      whileInView={{ opacity: 1}}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}
+      viewport={{ once: true }}
     >
       {/* Header - Question and Icon */}
       <div className={style.accordionHeader}>

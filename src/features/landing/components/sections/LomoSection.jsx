@@ -14,7 +14,7 @@ function LomoSection() {
   return (
     <section
       id='lomo'
-      className={`bg-black position-relative d-flex justify-content-center align-items-center ${style.lomoSection}`}
+      className={`bg-black position-relative d-flex justify-content-center align-items-start ${style.lomoSection}`}
     >
       <div
         className={`d-flex overflow-hidden ${style.lomoCard}`}
@@ -24,7 +24,8 @@ function LomoSection() {
         <motion.div className={`d-flex flex-column justify-content-center align-items-start ${style.lomoLeftColumn}`}
           initial={{ opacity: 0, x: -200 }} // Start off-screen left
           whileInView={{ opacity: 1, x: 0 }}    // End at normal position
-          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true }}>
 
           {/* Tagline */}
           <p className={`text-orange-lumos text-start ${style.lomoTagline}`}>
@@ -61,6 +62,7 @@ function LomoSection() {
           initial={{ opacity: 0, x: 200 }} // Start off-screen left
           whileInView={{ opacity: 1, x: 0 }}    // End at normal position
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true }}
         >
           {/* Voice Icon */}
           <div className={style.lomoVoiceIconWrapper}>

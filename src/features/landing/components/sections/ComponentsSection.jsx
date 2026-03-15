@@ -45,7 +45,8 @@ export function ComponentsSection() {
 
           initial={{ opacity: 0 }} // Start off-screen left
           whileInView={{ opacity: 1 }}    // End at normal position
-          transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}>
+          transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}
+          viewport={{ once: true }}>
           <p className="display-3 text-light fw-bold">
             Explore Your <span className="text-orange-lumos fst-italic">Lumos</span> Assistive Gear
           </p>
@@ -58,7 +59,8 @@ export function ComponentsSection() {
 
               initial={{ opacity: 0, y: -200 }} // Start off-screen left
               whileInView={{ opacity: 1, y: 0 }}    // End at normal position
-              transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}>
+              transition={{ duration: 0.5, delay: index * 0.2, ease: 'easeOut' }}
+              viewport={{ once: true }}>
               <div className={`card card-dark p-4 h-100 h-100 bg-light rounded-5 border border-gray ${product.shadow === 'bottom' ? 'hoverShadowAriseFromBottom' : (product.shadow === 'Right' ? 'hoverShadowSlideFromRight' : 'hoverShadowdowngardeFromTop')}`}
                 style={{ backgroundImage: `url(${productImages[product.name]})`, backgroundSize: responsiveBackgroundSize, backgroundPosition: 'center' }}>
                 <div className={` w-100 h-100 d-flex flex-column justify-content-${product.descriptionPosition} py-4`}>

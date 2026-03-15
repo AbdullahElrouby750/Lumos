@@ -78,32 +78,32 @@
 
 /* Headline Font Sizes */
 .headlineDesktop {
-  font-size: 96.6px;
+  font-size: 95px;
   line-height: 1.1;
   font-weight: 700;
 }
 
 @media (max-width: 1199px) {
   .headlineDesktop {
-    font-size: 60px;
+    font-size: 65px;
   }
 }
 
 @media (max-width: 767px) {
   .headlineDesktop {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 
 @media (max-width: 575px) {
   .headlineDesktop {
-    font-size: 32px;
+    font-size: 37px;
   }
 }
 
 /* "Limits" Word Font Sizes */
 .limitsWord {
-  font-size: 150px;
+  font-size: 200px;
   line-height: 1.1;
   font-weight: 700;
   display: inline;

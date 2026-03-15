@@ -1,3 +1,5 @@
+
+import lumosBrand from '../../../../assets/lumos.svg'
 /**
  * FooterSection
  * - 4 columns: Brand, Products, Company, Legal
@@ -20,15 +22,8 @@ export function FooterSection() {
           {/* Brand */}
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="mb-3 d-flex align-items-center gap-2">
-              <div className="d-flex align-items-center justify-content-center" style={{
-                width: '2rem',
-                height: '2rem',
-                backgroundColor: '#ff4500',
-                borderRadius: '0.25rem'
-              }}>
-                <span className="text-white fw-bold">L</span>
+              <div className="d-flex align-items-center justify-content-center"  style={{ backgroundImage: `url(${lumosBrand})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '10rem', height: '3rem' }}>
               </div>
-              <span className="text-white fw-bold">Lumos</span>
             </div>
             <p className="small">
               Empowering individuals through intelligent assistive technology and thoughtful design.

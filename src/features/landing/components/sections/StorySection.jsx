@@ -34,7 +34,8 @@ export function StorySection() {
                             <motion.h2 className={style.headline}
                                 initial={{ opacity: 0, y: 100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+                                viewport={{ once: true }}>
                                 Architecting the <span className="text-orange-lumos">Future</span> of Human Mobility
                             </motion.h2>
 
@@ -42,7 +43,8 @@ export function StorySection() {
                             <motion.p className={style.description}
                                 initial={{ opacity: 0, y: 100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+                                viewport={{ once: true }}>
                                 Founded at the intersection of empathy and deep tech, Team Nova is dedicated to breaking barriers for the visually impaired. We don't just build hardware; we craft intelligent companions that help people navigate the world with confidence and dignity.
                             </motion.p>
 
@@ -50,7 +52,8 @@ export function StorySection() {
                             <motion.div className={style.infoBadges}
                                 initial={{ opacity: 0, y: 100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+                                viewport={{ once: true }}>
                                 <div className={style.infoBadge}>
                                     <span className={style.infoBadgeLabel}>Established</span>
                                     <span className={style.infoBadgeValue}>2026 // GRAD_PROJ</span>
@@ -66,9 +69,10 @@ export function StorySection() {
                     {/* RIGHT COLUMN */}
                     <div className="col-12 col-lg-5 offset-lg-1">
                         <motion.div className={style.missionCard}
-                                initial={{ opacity: 0, y:-100 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}>
+                            initial={{ opacity: 0, y: -100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+                            viewport={{ once: true }}>
                             <div className={style.missionStar}></div>
                             {/* Mission Header */}
                             <div className={style.missionHeader}>

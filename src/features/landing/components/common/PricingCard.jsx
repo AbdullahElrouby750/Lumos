@@ -16,8 +16,9 @@ export function PricingCard({ plan, index = 1 }) {
     <motion.div className={`card card-dark position-relative h-100 ${highlighted ? 'border-2 border-orange-lumos shadow-lg' : ''}`}
       style={highlighted ? { transform: 'scale(1.05)' } : {}}
       initial={{ opacity: 0 }} // Start off-screen left
-      whileInView={{ opacity: 1}}    // End at normal position
+      whileInView={{ opacity: 1 }}    // End at normal position
       transition={{ duration: 0.5, delay: index * 0.3, ease: 'easeOut' }}
+      viewport={{ once: true }}
     >
       {/* Highlighted Badge */}
       {highlighted && (
