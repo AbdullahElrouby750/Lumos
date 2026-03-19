@@ -413,7 +413,62 @@
   }
 }
 
-/* ==================== */
-/* DARK MODE (optional) */
-/* ==================== */
-/* Already dark mode by default, no additional dark mode styles needed */
+
+.messageContent {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Bold text */
+.boldText {
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Line breaks and spacing */
+.spacer {
+  height: 0.5rem;
+}
+
+.textLine {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Bullet points */
+.bulletItem {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+  margin-left: 0.5rem;
+  align-items: flex-start;
+}
+
+.bullet {
+  flex-shrink: 0;
+  font-weight: bold;
+  color: var(--brand-color);
+}
+
+/* Numbered lists */
+.numberedItem {
+  margin: 0.25rem 0;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+}
+
+/* Make sure message content looks good */
+.messageBubble p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.messageBubble ul,
+.messageBubble ol {
+  margin: 0.25rem 0;
+  padding-left: 1.5rem;
+}
+
+.messageBubble li {
+  margin: 0.2rem 0;
+}
