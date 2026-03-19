@@ -2,16 +2,40 @@ import style from './ChatWidget.module.css';
 
 /**
  * ChatMessage
- * Single message bubble component with markdown support
+ * Single message bubble component with markdown and RTL support
  * - Handles **bold** text
  * - Handles \n line breaks
  * - Handles bullet points (* and - lists)
- * - Handles numbered lists
- * - User messages: right-aligned, orange background
- * - LUMO messages: left-aligned, dark background
+ * - Handles Arabic (RTL) and English (LTR) text properly
+ * - Auto-detects language direction
  */
 export function ChatMessage({ role, text }) {
   const isUser = role === 'user';
+
+  /**
+   * Detect if text contains Arabic characters
+   */
+  const isArabic = (str) => {
+    const arabicRegex = /[\u0600-\u06FF]/g;
+    return arabicRegex.test(str);
+  };
+
+  /**
+   * Determine text direction based on content
+   */
+  const getTextDirection = (rawText) => {
+    if (!rawText) return 'ltr';
+    
+    // Count Arabic vs English characters
+    const arabicChars = (rawText.match(/[\u0600-\u06FF]/g) || []).length;
+    const latinChars = (rawText.match(/[a-zA-Z]/g) || []).length;
+    
+    // If more Arabic than Latin, use RTL
+    if (arabicChars > latinChars) {
+      return 'rtl';
+    }
+    return 'ltr';
+  };
 
   /**
    * Parse markdown text and convert to React elements
@@ -20,6 +44,7 @@ export function ChatMessage({ role, text }) {
    * - \n line breaks
    * - * bullet points
    * - Numbered lists
+   * - Arabic and English mixed text (bidirectional)
    */
   const parseMarkdown = (rawText) => {
     if (!rawText) return null;
@@ -52,8 +77,13 @@ export function ChatMessage({ role, text }) {
               // Bullet points: * or -
               if (line.trim().startsWith('*') || line.trim().startsWith('-')) {
                 const bulletText = line.trim().slice(1).trim();
+                const bulletDirection = isArabic(bulletText) ? 'rtl' : 'ltr';
                 return (
-                  <div key={lineIndex} className={style.bulletItem}>
+                  <div 
+                    key={lineIndex} 
+                    className={style.bulletItem}
+                    dir={bulletDirection}
+                  >
                     <span className={style.bullet}>•</span>
                     <span>{bulletText}</span>
                   </div>
@@ -63,16 +93,26 @@ export function ChatMessage({ role, text }) {
               // Numbered lists: 1. 2. 3. etc
               if (/^\d+\./.test(line.trim())) {
                 const numberedText = line.trim().replace(/^\d+\.\s*/, '');
+                const numberedDirection = isArabic(numberedText) ? 'rtl' : 'ltr';
                 return (
-                  <div key={lineIndex} className={style.numberedItem}>
+                  <div 
+                    key={lineIndex} 
+                    className={style.numberedItem}
+                    dir={numberedDirection}
+                  >
                     {numberedText}
                   </div>
                 );
               }
 
               // Regular text
+              const textDirection = isArabic(line) ? 'rtl' : 'ltr';
               return (
-                <div key={lineIndex} className={style.textLine}>
+                <div 
+                  key={lineIndex} 
+                  className={style.textLine}
+                  dir={textDirection}
+                >
                   {line}
                 </div>
               );
@@ -82,13 +122,23 @@ export function ChatMessage({ role, text }) {
       }
 
       // Regular text without special formatting
-      return <span key={index}>{part}</span>;
+      const textDirection = isArabic(part) ? 'rtl' : 'ltr';
+      return (
+        <span key={index} dir={textDirection}>
+          {part}
+        </span>
+      );
     });
   };
 
+  const textDirection = getTextDirection(text);
+
   return (
     <div className={`${style.messageRow} ${isUser ? style.userRow : style.lumoRow}`}>
-      <div className={`${style.messageBubble} ${isUser ? style.userMessage : style.lumoMessage}`}>
+      <div 
+        className={`${style.messageBubble} ${isUser ? style.userMessage : style.lumoMessage}`}
+        dir={textDirection}
+      >
         <div className={style.messageContent}>
           {parseMarkdown(text)}
         </div>

@@ -472,3 +472,171 @@
 .messageBubble li {
   margin: 0.2rem 0;
 }
+
+
+/* ==================== */
+/* RTL/LTR SUPPORT      */
+/* Add these to ChatWidget.module.css */
+/* ==================== */
+
+/* Support for bidirectional text (Arabic + English) */
+.messageContent {
+  white-space: pre-wrap;
+  word-break: break-word;
+  /* Allow the dir attribute to control text flow */
+  unicode-bidi: embed;
+}
+
+/* For elements with explicit direction */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* RTL Bullet Points */
+[dir="rtl"] .bulletItem {
+  flex-direction: row-reverse;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .bullet {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* LTR Bullet Points */
+[dir="ltr"] .bulletItem {
+  flex-direction: row;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+[dir="ltr"] .bullet {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* RTL Numbered Items */
+[dir="rtl"] .numberedItem {
+  margin-right: 1rem;
+  margin-left: 0;
+  padding-right: 0.5rem;
+  padding-left: 0;
+  text-align: right;
+}
+
+/* LTR Numbered Items */
+[dir="ltr"] .numberedItem {
+  margin-left: 1rem;
+  margin-right: 0;
+  padding-left: 0.5rem;
+  padding-right: 0;
+  text-align: left;
+}
+
+/* Base bullet and text line styles */
+.bulletItem {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+  align-items: flex-start;
+}
+
+.bullet {
+  flex-shrink: 0;
+  font-weight: bold;
+  color: var(--brand-color);
+}
+
+.spacer {
+  height: 0.5rem;
+}
+
+.textLine {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.numberedItem {
+  margin: 0.25rem 0;
+}
+
+.boldText {
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Message bubble with RTL support */
+.messageBubble {
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  max-width: 80%;
+  word-wrap: break-word;
+  /* Ensure proper bidi handling */
+  unicode-bidi: plaintext;
+}
+
+/* Ensure proper handling of mixed content */
+.messageContent {
+  /* This ensures that the dir attribute on child elements is respected */
+  display: block;
+}
+
+/* For any paragraphs or divs inside message content */
+.messageContent p,
+.messageContent div {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Override any conflicting text-align from parent */
+[dir="rtl"] .messageContent {
+  text-align: right;
+}
+
+[dir="ltr"] .messageContent {
+  text-align: left;
+}
+
+/* ==================== */
+/* MIXED TEXT HANDLING  */
+/* ==================== */
+
+/* For lines that contain both Arabic and English */
+.textLine {
+  /* Allow inline elements to flow naturally */
+  display: block;
+  unicode-bidi: plaintext;
+}
+
+/* Ensure inline elements respect bidi context */
+.textLine span {
+  unicode-bidi: isolate;
+}
+
+/* ==================== */
+/* RESPONSIVE RTL/LTR   */
+/* ==================== */
+
+@media (max-width: 767px) {
+  [dir="rtl"] .messageBubble,
+  [dir="ltr"] .messageBubble {
+    max-width: 90%;
+  }
+
+  [dir="rtl"] .bulletItem,
+  [dir="ltr"] .bulletItem {
+    gap: 0.4rem;
+  }
+
+  [dir="rtl"] .numberItem,
+  [dir="ltr"] .numberItem {
+    margin: 0.2rem 0;
+  }
+}
