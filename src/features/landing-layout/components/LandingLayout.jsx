@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import ChatWidget from '../../landing/components/chatbot/ChatWidget';
 
 /**
  * LandingLayout
@@ -11,6 +12,7 @@ export function LandingLayout() {
   return (
     <div className="bg-black min-vh-100 text-white">
       <Outlet />
+      <ChatWidget />
     </div>
   );
 }
