@@ -28,7 +28,7 @@ export function ChatWindow({
       {/* Header */}
       <div className={style.header}>
         <div className={style.headerContent}>
-          <img src={Agent_AI_Avatar} alt="LUMO" className={style.avatar} />
+          <img src={Agent_AI_Avatar} alt="LUMO" className={style.avatar}  loading="lazy"/>
           <div className={style.headerText}>
             <h3 className={style.headerTitle}>LUMO</h3>
             <div className={style.onlineStatus}>

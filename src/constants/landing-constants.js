@@ -73,7 +73,7 @@ export const PRICING_PLANS = [
   {
     id: 1,
     name: 'Starter Plan',
-    price: '$49',
+    price: '$479',
     period: '/one-time',
     description: 'Perfect for getting started',
     features: [
@@ -89,7 +89,7 @@ export const PRICING_PLANS = [
   {
     id: 2,
     name: 'Premium Plan',
-    price: '$129',
+    price: '$765',
     period: '/one-time',
     description: 'Most popular choice',
     features: [
@@ -134,7 +134,7 @@ export const TEAM_MEMBERS = [
       url: 'https://linkedin.com/in/abdullah-elrouby-803554245',
     },
     link2: {
-      url: 'https://twitter.com/ameliaross',
+      url: 'https://rouby-portfolio.vercel.app/',
     }
   },
   {
@@ -143,11 +143,11 @@ export const TEAM_MEMBERS = [
     initials: 'HA',
     role: 'Senior ML Engineer',
     link1: {
-      url: 'https://linkedin.com/in/amelia-ross',
+      url: 'https://www.linkedin.com/in/habiba-elshobaky-b59a82337/',
     },
-    link2: {
-      url: 'https://twitter.com/ameliaross',
-    }
+    // link2: {
+    //   url: 'https://twitter.com/ameliaross',
+    // }
   },
   {
     id: 3,
@@ -155,10 +155,10 @@ export const TEAM_MEMBERS = [
     initials: 'HA',
     role: 'UI/UX Designer',
     link1: {
-      url: 'https://linkedin.com/in/amelia-ross',
+      url: 'https://www.linkedin.com/in/henar-ahmed-737023253',
     },
     link2: {
-      url: 'https://twitter.com/ameliaross',
+      url: 'https://www.behance.net/henarjr',
     }
   },
   {
@@ -167,10 +167,10 @@ export const TEAM_MEMBERS = [
     initials: 'DO',
     role: 'Hardware Engineer',
     link1: {
-      url: 'https://linkedin.com/in/amelia-ross',
+      url: 'https://www.linkedin.com/in/diaa-oraby-397423247/',
     },
     link2: {
-      url: 'https://twitter.com/ameliaross',
+      url: 'https://www.instagram.com/diaaoraby',
     }
   },
   {
@@ -179,10 +179,10 @@ export const TEAM_MEMBERS = [
     initials: 'AS',
     role: 'Backend Developer',
     link1: {
-      url: 'https://linkedin.com/in/amelia-ross',
+      url: 'https://www.linkedin.com/in/alaamohamedsaleh/',
     },
     link2: {
-      url: 'https://twitter.com/ameliaross',
+      url: 'https://github.com/alaaMsaleh',
     }
   },
   {
@@ -191,10 +191,10 @@ export const TEAM_MEMBERS = [
     initials: 'MS',
     role: 'Backend Developer',
     link1: {
-      url: 'https://linkedin.com/in/amelia-ross',
+      url: 'https://www.linkedin.com/in/mahmoud-s-hassan/',
     },
     link2: {
-      url: 'https://twitter.com/ameliaross',
+      url: 'https://github.com/mahmoud-S-hassan',
     }
   },
   {
@@ -203,10 +203,10 @@ export const TEAM_MEMBERS = [
     initials: 'SN',
     role: 'Flutter Developer',
     link1: {
-      url: 'https://linkedin.com/in/amelia-ross',
+      url: 'https://www.linkedin.com/in/sara-elnwam-441144389/',
     },
     link2: {
-      url: 'https://twitter.com/ameliaross',
+      url: 'https://github.com/sara-elnwam',
     }
   },
   {
@@ -215,11 +215,11 @@ export const TEAM_MEMBERS = [
     initials: 'MB',
     role: 'Hardware Engineer',
     link1: {
-      url: 'https://linkedin.com/in/amelia-ross',
+      url: 'https://www.linkedin.com/in/mahmoud-bakr-/',
     },
-    link2: {
-      url: 'https://twitter.com/ameliaross',
-    }
+    // link2: {
+    //   url: 'https://twitter.com/ameliaross',
+    // }
   }
 ];
 
@@ -264,10 +264,10 @@ export const FAQ_DATA = [
 
 export const FOOTER_LINKS = {
   product: [
-    { label: 'Features', href: '#' },
-    { label: 'Pricing', href: '#' },
-    { label: 'Security', href: '#' },
-    { label: 'Team', href: '#' },
+    { label: 'Features', href: '#features' },
+    { label: 'Products', href: '#pricing' },
+    { label: 'Security', href: '#products' },
+    { label: 'Team', href: '#team' },
   ],
   company: [
     { label: 'About', href: '#' },
@@ -284,7 +284,7 @@ export const FOOTER_LINKS = {
 };
 
 export const SOCIAL_LINKS = [
-  { label: 'GitHub', icon: 'Github', url: 'https://github.com' },
-  { label: 'LinkedIn', icon: 'https://linkedin.com', url: 'https://linkedin.com' },
-  { label: 'Twitter', icon: 'https://twitter.com', url: 'https://twitter.com' },
+  // { label: 'GitHub', icon: 'Github', url: 'https://github.com' },
+  { label: 'LinkedIn', icon: 'https://linkedin.com', url: 'https://www.linkedin.com/in/nova-team-6b302a3b0/' },
+  { label: 'instagram', icon: 'https://instagram.com', url: 'https://www.instagram.com/lumos_nova11' },
 ];

@@ -70,6 +70,7 @@ function LomoSection() {
               className='w-100'
               src={lomoVoiceShape}
               alt="Lomo Voice Shape"
+              loading="lazy"
             />
           </div>
 

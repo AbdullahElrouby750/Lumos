@@ -1,18 +1,40 @@
-
+import { useState, useRef, Suspense } from 'react';
 import ReactPlayer from 'react-player';
 import style from './StorySection.module.css';
 import vid from '../../../../assets/vid.mp4'
-import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 
 /**
  * StorySection
  * Story/About section with:
  * - Left: Headline, description, info badges
- * - Right: Mission statement card with metrics
+ * - Right: Mission statement card with metrics and video
  * - Responsive: 2 cols desktop, 1 col mobile
+ * - Video with error handling and proper React Player config
  */
 export function StorySection() {
+    const [videoError, setVideoError] = useState(false);
+    const playerRef = useRef(null);
+
+    /**
+     * Handle video player errors
+     */
+    const handleVideoError = (error) => {
+        console.error('Video player error:', error);
+        setVideoError(true);
+    };
+
+    const handleReady = () => {
+        if (document.pictureInPictureEnabled && playerRef.current) {
+            const videoElement = playerRef.current.getInternalPlayer();
+
+            if (videoElement && videoElement instanceof HTMLVideoElement) {
+                // Function to handle the actual PiP request
+
+            }
+        }
+    }
+
     return (
         <section
             id="story"
@@ -74,6 +96,7 @@ export function StorySection() {
                             transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
                             viewport={{ once: true }}>
                             <div className={style.missionStar}></div>
+
                             {/* Mission Header */}
                             <div className={style.missionHeader}>
                                 <span className={style.missionDot} />
@@ -101,25 +124,49 @@ export function StorySection() {
                                 </div>
                             </div>
 
-                            <div className={` w-100 h-50 d-flex justify-content-center align-items-center rounded-2 overflow-hidden ${style.videoBorder}`}>
-                                <Suspense fallback={<div className={style.videoLoader}>Loading...</div>}>
-                                    <ReactPlayer
-                                        url={vid}
-                                        controls
-                                        playing
-                                        loop
-                                        muted
-                                        width='100%'
-                                        height='100%'
-                                    />
-                                </Suspense>
+                            {/* VIDEO PLAYER */}
+                            <div
+                                className={`w-100 d-flex justify-content-center align-items-center rounded-2 overflow-hidden ${style.videoBorder}`}
+                                style={{ aspectRatio: '16/9', backgroundColor: '#0a0a0a', minHeight: '200px' }}
+                            >
+                                {videoError ? (
+                                    <div className={style.videoError}>
+                                        <p>⚠️ Video unavailable</p>
+                                        <p style={{ fontSize: '0.8rem', marginTop: '0.5rem' }}>Please check the file path or use Solution 2 (hosting)</p>
+                                    </div>
+                                ) : (
+                                    <Suspense fallback={<div className={style.videoLoader}>Loading video...</div>}>
+                                        <ReactPlayer
+                                            ref={playerRef}
+                                            url={vid}
+                                            controls={true}
+                                            width='100%'
+                                            height='100%'
+                                            playing={false}
+                                            loop={false}
+                                            muted={true}
+                                            pip={false}
+                                            onReady={handleReady}
+                                            progressInterval={100}
+                                            onError={handleVideoError}
+                                            config={{
+                                                file: {
+                                                    attributes: {
+                                                        controlsList: 'nodownload',
+                                                        style: { width: '100%', height: '100%' }
+                                                    }
+                                                }
+                                            }}
+                                        />
+                                    </Suspense>
+                                )}
                             </div>
 
                             {/* Status Badge */}
-                            <div className={`${style.statusBadge} glassmorphism lumos-shadow`}>
+                            <div className={`${style.statusBadge} glassmorphism`}>
                                 <span className={style.statusIcon} />
                                 <div className=' d-flex flex-column justify-content-center mx-2 px-2'>
-                                    <span className=' customGray'>
+                                    <span className='customGray'>
                                         System Status
                                     </span>
                                     ACTIVE_PROTOTYPE

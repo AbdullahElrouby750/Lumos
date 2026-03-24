@@ -67,7 +67,7 @@ export function ComponentsSection() {
 
                   <div className=" w-100 d-flex flex-column justify-content-center align-items-start mt-5 pt-5">
                     <div className=' d-flex justify-content-start align-items-center w-100 mb-2'>
-                      <img className=' me-2 h-100' src={productIcons[product.name]} alt={product.name} />
+                      <img className=' me-2 h-100' src={productIcons[product.name]} alt={product.name} loading="lazy" />
                       <h3 className="h5 fw-semibold text-white m-0">{product.name}</h3>
                     </div>
                     <p className=" fw-medium small ps-2">{product.description}</p>
